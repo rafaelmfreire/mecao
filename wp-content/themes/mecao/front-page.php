@@ -1,15 +1,14 @@
 <?php
 get_header();
-
 ?>
 
 <main>
 	<div class="bg-white container mx-auto rounded-[24px] py-8 my-6 px-8 grid grid-cols-12 gap-8">
 		<div class="col-span-8">
 			<article>
-				<div class="relative rounded-md overflow-hidden shadow">
+				<div class="rounded-md relative  overflow-hidden shadow">
 					<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent"></div>
-					<img src="<?php echo get_theme_file_uri('/images/rafinha.jpg'); ?>" alt="">
+					<img src="<?php echo get_theme_file_uri('/images/rafinha.jpg'); ?>" alt=""> 
 					<header class="p-6 absolute bottom-0">
 						<div class="flex items-center text-white mb-2">
 							<time class="text-sm font-medium relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-3 before:h-3 before:rounded-full before:bg-red">15/04/2024</time>
@@ -36,7 +35,7 @@ get_header();
 
 		</div>
 		<section class="col-span-4">
-			<?php 
+			<?php
 			$lastMatch = new WP_Query([
 				'posts_per_page' => 1,
 				'post_type' => 'match',
@@ -51,21 +50,21 @@ get_header();
 				'orderby' => 'meta_value',
 				'order' => 'DESC'
 			]);
-			
-			if($lastMatch->have_posts()) {
+
+			if ($lastMatch->have_posts()) {
 				$lastMatch->the_post();
-				?>
-			<div class="border border-gray-dark/10 rounded-lg shadow-small mb-8">
-				<?php 
-				$matchTime = new DateTime(get_field('match_time')); 
-				?>
-				<header class="flex items-center justify-between bg-gradient-to-r gray-gradient rounded-t-md px-4 py-1">
-					<time class="flex items-center space-x-1">
-						<span class="font-display font-semibold text-[2.5rem] text-yellow leading-none">
-							<?php echo $matchTime->format('d'); ?>
-						</span>
-						<div class="flex-col space-y-0">
-							<?php 
+			?>
+				<div class="border border-gray-dark/10 rounded-lg shadow-small mb-8">
+					<?php
+					$matchTime = new DateTime(get_field('match_time'));
+					?>
+					<header class="flex items-center justify-between bg-gradient-to-r gray-gradient rounded-t-md px-4 py-1">
+						<time class="flex items-center space-x-1">
+							<span class="font-display font-semibold text-[2.5rem] text-yellow leading-none">
+								<?php echo $matchTime->format('d'); ?>
+							</span>
+							<div class="flex-col space-y-0">
+								<?php
 								$formatter = new IntlDateFormatter(
 									'pt_BR',
 									IntlDateFormatter::SHORT,
@@ -73,53 +72,53 @@ get_header();
 									'UTC',
 									IntlDateFormatter::GREGORIAN,
 								);
-							 ?>
-							<span class="block uppercase leading-none text-white font-black text-sm">
-								<?php
-								$formatter->setPattern('cccc');
-								echo $formatter->format($matchTime);
 								?>
+								<span class="block uppercase leading-none text-white font-black text-sm">
+									<?php
+									$formatter->setPattern('cccc');
+									echo $formatter->format($matchTime);
+									?>
 
-							</span>
-							<span class="block uppercase leading-none text-white text-sm">
-								<?php
-								$formatter->setPattern('MMMM');
-								echo $formatter->format($matchTime);
-								?>
-							</span>
-						</div>
-					</time>
+								</span>
+								<span class="block uppercase leading-none text-white text-sm">
+									<?php
+									$formatter->setPattern('MMMM');
+									echo $formatter->format($matchTime);
+									?>
+								</span>
+							</div>
+						</time>
 						<h2 class="text-gray font-black text-2xl tracking-tighter italic uppercase">Último Jogo</h2>
-				</header>
-				<div class="px-4 py-6">
-					<div class="grid grid-cols-home-matches justify-items-stretch">
-						<div class="justify-self-start self-end">
-							<img src="<?php echo get_field('home_team'); ?>" alt="">
-						</div>
-						<div class="justify-self-center">
-							<h3 class="text-center leading-none text-xs text-gray-light font-medium uppercase mb-6">
-								<?php echo get_the_title(get_field('match_competition')[0]) ?>
-							</h3>
+					</header>
+					<div class="px-4 py-6">
+						<div class="grid grid-cols-home-matches justify-items-stretch">
+							<div class="justify-self-start self-end">
+								<img src="<?php echo get_field('home_team'); ?>" alt="">
+							</div>
+							<div class="justify-self-center">
+								<h3 class="text-center leading-none text-xs text-gray-light font-medium uppercase mb-6">
+									<?php echo get_the_title(get_field('match_competition')[0]) ?>
+								</h3>
 								<p class="text-center leading-none text-xs text-gray-light mb-3">Resultado</p>
 								<p class="text-center leading-none text-[2.5rem] mb-6">
 									<span class="score-gradient px-4 py-0 font-display font-semibold text-yellow-dark rounded-lg border-2 border-black">
 										<?php echo get_field('match_score'); ?>
 									</span>
 								</p>
-							<a href="<?php the_permalink(); ?>">
-								<p class="text-center leading-none text-lg font-black mb-4 text-gray-dark"><?php the_title(); ?></p>
-							</a>
-							<!-- <p class="text-center leading-none text-lg font-black mb-4 text-gray-dark">Santa Cruz <span class="text-stone-400 font-medium">x</span> <span class="text-red-dark">América 🏆</span></p> -->
-							<p class="text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
-						</div>
-						<div class="justify-self-end self-end">
-							<img src="<?php echo get_field('away_team') ?>" alt="">
+								<a href="<?php the_permalink(); ?>">
+									<p class="text-center leading-none text-lg font-black mb-4 text-gray-dark"><?php the_title(); ?></p>
+								</a>
+								<!-- <p class="text-center leading-none text-lg font-black mb-4 text-gray-dark">Santa Cruz <span class="text-stone-400 font-medium">x</span> <span class="text-red-dark">América 🏆</span></p> -->
+								<p class="text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
+							</div>
+							<div class="justify-self-end self-end">
+								<img src="<?php echo get_field('away_team') ?>" alt="">
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-				<?php } 
-				wp_reset_postdata();
+			<?php }
+			wp_reset_postdata();
 
 			$nextMatch = new WP_Query([
 				'posts_per_page' => 1,
@@ -135,21 +134,21 @@ get_header();
 				'orderby' => 'meta_value',
 				'order' => 'ASC'
 			]);
-				
-			if($nextMatch->have_posts()) {
+
+			if ($nextMatch->have_posts()) {
 				$nextMatch->the_post();
-				?>
-			<div class="border border-gray-dark/10 rounded-lg shadow-small mb-8">
-				<?php 
-				$matchTime = new DateTime(get_field('match_time')); 
-				?>
-				<header class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-1">
-					<time class="flex items-center space-x-1">
-						<span class="font-display font-semibold text-[2.5rem] text-yellow leading-none">
-							<?php echo $matchTime->format('d'); ?>
-						</span>
-						<div class="flex-col space-y-0">
-							<?php 
+			?>
+				<div class="border border-gray-dark/10 rounded-lg shadow-small mb-8">
+					<?php
+					$matchTime = new DateTime(get_field('match_time'));
+					?>
+					<header class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-1">
+						<time class="flex items-center space-x-1">
+							<span class="font-display font-semibold text-[2.5rem] text-yellow leading-none">
+								<?php echo $matchTime->format('d'); ?>
+							</span>
+							<div class="flex-col space-y-0">
+								<?php
 								$formatter = new IntlDateFormatter(
 									'pt_BR',
 									IntlDateFormatter::SHORT,
@@ -157,59 +156,59 @@ get_header();
 									'UTC',
 									IntlDateFormatter::GREGORIAN,
 								);
-							 ?>
-							<span class="block uppercase leading-none text-white font-black text-sm">
-								<?php
-								$formatter->setPattern('cccc');
-								echo $formatter->format($matchTime);
 								?>
+								<span class="block uppercase leading-none text-white font-black text-sm">
+									<?php
+									$formatter->setPattern('cccc');
+									echo $formatter->format($matchTime);
+									?>
 
-							</span>
-							<span class="block uppercase leading-none text-white text-sm">
-								<?php
-								$formatter->setPattern('MMMM');
-								echo $formatter->format($matchTime);
-								?>
-							</span>
-						</div>
-					</time>
+								</span>
+								<span class="block uppercase leading-none text-white text-sm">
+									<?php
+									$formatter->setPattern('MMMM');
+									echo $formatter->format($matchTime);
+									?>
+								</span>
+							</div>
+						</time>
 						<h2 class="font-black text-2xl tracking-tighter yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Próximo Jogo</h2>
-				</header>
-				<div class="px-4 py-6">
-					<div class="grid grid-cols-home-matches justify-items-stretch">
-						<div class="justify-self-start self-end">
-							<img src="<?php echo get_field('home_team'); ?>" alt="">
-						</div>
-						<div class="justify-self-center">
-							<h3 class="text-center leading-none text-xs text-gray-light font-medium uppercase mb-6">
-								<?php 
-								echo get_the_title(get_field('match_competition')[0]);
-								 ?>
-							</h3>
-							<div class="inline-flex items-center space-x-4 mb-6 uppercase text-[0.625rem] text-gray-dark/60 font-medium"><span>Apresentado por</span> <img class="" src="<?php echo get_theme_file_uri('/images/bar.svg'); ?>" alt=""><img src="<?php echo get_theme_file_uri('/images/emobi.png'); ?>" alt=""></div>
+					</header>
+					<div class="px-4 py-6">
+						<div class="grid grid-cols-home-matches justify-items-stretch">
+							<div class="justify-self-start self-end">
+								<img src="<?php echo get_field('home_team'); ?>" alt="">
+							</div>
+							<div class="justify-self-center">
+								<h3 class="text-center leading-none text-xs text-gray-light font-medium uppercase mb-6">
+									<?php
+									echo get_the_title(get_field('match_competition')[0]);
+									?>
+								</h3>
+								<div class="inline-flex items-center space-x-4 mb-6 uppercase text-[0.625rem] text-gray-dark/60 font-medium"><span>Apresentado por</span> <img class="" src="<?php echo get_theme_file_uri('/images/bar.svg'); ?>" alt=""><img src="<?php echo get_theme_file_uri('/images/emobi.png'); ?>" alt=""></div>
 								<p class="text-center leading-none text-xs text-gray-light mb-3">Horário</p>
 								<p class="text-center leading-none text-[2.5rem] mb-6">
 									<span class="score-gradient px-4 py-0 font-display font-semibold text-yellow-dark rounded-lg border-2 border-black">
-										<?php 
+										<?php
 										$formatter->setPattern('HH:mm');
 										echo $formatter->format($matchTime);
 										?>
 									</span>
 								</p>
-							<a href="<?php the_permalink(); ?>">
-								<p class="text-center leading-none text-lg font-black mb-4 text-gray-dark"><?php the_title(); ?></p>
-							</a>
-							<p class="text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
-						</div>
-						<div class="justify-self-end self-end">
-							<img src="<?php echo get_field('away_team') ?>" alt="">
+								<a href="<?php the_permalink(); ?>">
+									<p class="text-center leading-none text-lg font-black mb-4 text-gray-dark"><?php the_title(); ?></p>
+								</a>
+								<p class="text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
+							</div>
+							<div class="justify-self-end self-end">
+								<img src="<?php echo get_field('away_team') ?>" alt="">
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-				<?php } 
-				wp_reset_postdata();
-				?>
+			<?php }
+			wp_reset_postdata();
+			?>
 
 			<div class="flex justify-center"><a href="<?php echo site_url('/jogos'); ?>" class="inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-[#292524] border-opacity-10 shadow-small">Calendário de Jogos</a></div>
 

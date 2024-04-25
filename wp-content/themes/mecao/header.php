@@ -71,14 +71,14 @@
 					<nav>
 						<ul class="flex items-center space-x-8 text-white font-bold">
 							<a href="<?php echo site_url('/noticias'); ?>">
-								<li class="<?php echo (get_post_type() == 'post' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>" >Notícias</li>
+								<li class="<?php echo (get_post_type() == 'post' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Notícias</li>
 							</a>
 							<a href="<?php echo site_url('/campeonatos'); ?>">
 								<!-- <li class="opacity-80">Campeonatos</li> -->
-								<li class="<?php echo (get_post_type() == 'competition' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>" >Campeonatos</li>
+								<li class="<?php echo (get_post_type() == 'competition' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Campeonatos</li>
 							</a>
 							<a href="<?php echo site_url('/jogos'); ?>">
-								<li class="<?php echo (get_post_type() == 'match' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>" >Jogos</li>
+								<li class="<?php echo (get_post_type() == 'match' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Jogos</li>
 							</a>
 							<a href="<?php echo site_url('/jogadores'); ?>">
 								<li class="opacity-80">Jogadores</li>

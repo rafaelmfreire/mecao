@@ -85,8 +85,8 @@ define('WP_DEBUG', false);
 /* Add any custom values between this line and the "stop editing" line. */
 
 define('WP_CONTENT_DIR', dirname(__FILE__) . '/wp-content');
-define('WP_CONTENT_URL', 'http://my-site.test/wp-content');
-define('DISALLOW_FILE_MODS', true);
+define('WP_CONTENT_URL', 'http://localhost/mecao/wp-content');
+// define('DISALLOW_FILE_MODS', true);
 
 /* That's all, stop editing! Happy publishing. */
 

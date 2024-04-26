@@ -13,6 +13,7 @@ function mecao_features()
 	add_theme_support('post-thumbnails');
 
 	add_image_size('homeNewsPhoto', 452, 300, true);
+	add_image_size('featuredPhoto', 900, 600, true);
 }
 
 add_action('after_setup_theme', 'mecao_features');

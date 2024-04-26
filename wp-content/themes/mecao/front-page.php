@@ -4,36 +4,42 @@ get_header();
 
 <main>
 	<div class="bg-white container mx-auto rounded-[24px] py-8 my-6 px-8 grid grid-cols-12 gap-8">
-		<div class="col-span-8">
-			<article>
-				<div class="rounded-md relative  overflow-hidden shadow">
-					<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent"></div>
-					<img src="<?php echo get_theme_file_uri('/images/rafinha.jpg'); ?>" alt="">
-					<header class="p-6 absolute bottom-0">
-						<div class="flex items-center text-white mb-2">
-							<time class="text-sm font-medium relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-3 before:h-3 before:rounded-full before:bg-red">15/04/2024</time>
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<circle cx="9" cy="17" r="1" fill="#FACC15" />
-								<circle cx="11" cy="14" r="1" fill="#FACC15" />
-								<circle cx="13" cy="11" r="1" fill="#FACC15" />
-								<circle cx="15" cy="8" r="1" fill="#FACC15" />
-							</svg>
-							<span class="uppercase text-xs font-bold tracking-widest">Notícias</span>
-						</div>
-						<h2 class="text-[2.5rem] leading-[2.875rem] font-bold text-white [text-shadow:_2px_2px_2px_rgb(0_0_0_/_50%)]">Front Page</h2>
-						<!-- <h2 class="text-[2.5rem] leading-[2.875rem] font-bold text-white">Rafinha comemora título e vê América-RN no “caminho certo” antes da Série D</h2> -->
-					</header>
-				</div>
-			</article>
-			<div class="flex items-center justify-center mt-14 space-x-8">
-				<span class="text-sm font-bold text-gray-dark/85">Parceiro Master</span>
-				<img src="<?php echo get_theme_file_uri('/images/emobi-large.png'); ?>" alt="">
-				<img src="<?php echo get_theme_file_uri('/images/bar.svg'); ?>" alt="">
-				<span class="text-sm font-bold text-gray-dark/85">Seja sócio do América</span>
-				<img src="<?php echo get_theme_file_uri('/images/socio-mecao.png'); ?>" alt="">
-			</div>
+		<!-- FEATURED -->
+		<?php
+		$featuredNews = new WP_Query([
+			'p' => get_option('sticky_posts')[0]
+		]);
 
-		</div>
+		while ($featuredNews->have_posts()) {
+			$featuredNews->the_post();
+		?>
+			<div class="col-span-8">
+				<a class="group" href="<?php the_permalink(); ?>">
+					<article>
+						<div class="rounded-md relative  overflow-hidden shadow">
+							<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 via-30% to-50%"></div>
+							<?php the_post_thumbnail('featuredPhoto', ['class' => 'w-full object-cover']); ?>
+							<header class="p-6 absolute bottom-0">
+								<h2 class="group-hover:underline text-pretty text-[2.5rem] leading-[2.875rem] font-bold text-white [text-shadow:_2px_2px_2px_rgb(0_0_0_/_50%)]"><?php the_title(); ?></h2>
+							</header>
+						</div>
+					</article>
+				</a>
+
+				<div class="flex items-center justify-center mt-14 space-x-8">
+					<span class="text-sm font-bold text-gray-dark/85">Parceiro Master</span>
+					<img src="<?php echo get_theme_file_uri('/images/emobi-large.png'); ?>" alt="">
+					<img src="<?php echo get_theme_file_uri('/images/bar.svg'); ?>" alt="">
+					<span class="text-sm font-bold text-gray-dark/85">Seja sócio do América</span>
+					<img src="<?php echo get_theme_file_uri('/images/socio-mecao.png'); ?>" alt="">
+				</div>
+			</div>
+		<?php
+		}
+		wp_reset_postdata();
+		?>
+		<!-- END FEATURED -->
+
 		<section class="col-span-4">
 			<?php
 			$lastMatch = new WP_Query([
@@ -54,6 +60,7 @@ get_header();
 			if ($lastMatch->have_posts()) {
 				$lastMatch->the_post();
 			?>
+				<!-- LAST GAME -->
 				<div class="border border-gray-dark/10 rounded-lg shadow-small mb-8">
 					<?php
 					$matchTime = new DateTime(get_field('match_time'));
@@ -117,6 +124,7 @@ get_header();
 						</div>
 					</div>
 				</div>
+				<!-- END LAST GAME -->
 			<?php }
 			wp_reset_postdata();
 
@@ -138,6 +146,7 @@ get_header();
 			if ($nextMatch->have_posts()) {
 				$nextMatch->the_post();
 			?>
+				<!-- NEXT GAME -->
 				<div class="border border-gray-dark/10 rounded-lg shadow-small mb-8">
 					<?php
 					$matchTime = new DateTime(get_field('match_time'));
@@ -177,7 +186,7 @@ get_header();
 					<div class="px-4 py-6">
 						<div class="grid grid-cols-home-matches justify-items-stretch">
 							<div class="justify-self-start self-end">
-								<img src="<?php echo get_field('home_team'); ?>" alt="">
+								<img class="h-full max-h-[72px] object-cover" src="<?php echo get_field('home_team'); ?>" alt="">
 							</div>
 							<div class="justify-self-center">
 								<h3 class="text-center leading-none text-xs text-gray-light font-medium uppercase mb-6">
@@ -206,6 +215,7 @@ get_header();
 						</div>
 					</div>
 				</div>
+				<!-- END NEXT GAMES -->
 			<?php }
 			wp_reset_postdata();
 			?>
@@ -213,13 +223,14 @@ get_header();
 			<div class="flex justify-center"><a href="<?php echo site_url('/jogos'); ?>" class="inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-[#292524] border-opacity-10 shadow-small">Calendário de Jogos</a></div>
 
 		</section>
+
+		<!-- LAST NEWS -->
 		<div class="col-span-8 mt-10 space-y-4">
-
 			<?php
-
 			$lastNews = new WP_Query([
 				'posts_per_page' => 5,
-				'category_name' => 'noticias'
+				'category_name' => 'noticias',
+				'post__not_in' => get_option('sticky_posts')
 			]);
 
 			while ($lastNews->have_posts()) {
@@ -246,7 +257,7 @@ get_header();
 								<span class="uppercase text-xs font-bold tracking-widest"><?php echo get_the_category_list(', '); ?></span>
 							</div>
 							<a href="<?php the_permalink(); ?>">
-								<h3 class="font-bold text-lg leading-6 mb-2 line-clamp-3">
+								<h3 class="font-bold text-pretty text-lg leading-6 mb-2 line-clamp-3">
 									<?php echo get_the_title(); ?>
 								</h3>
 							</a>
@@ -263,7 +274,10 @@ get_header();
 			<div class="mt-8 flex justify-center"><a href="<?php echo site_url('/noticias'); ?>" class="inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-[#292524] border-opacity-10 shadow-small">Ver mais notícias</a></div>
 
 		</div>
+		<!-- END LAST NEWS -->
+
 		<div class="col-span-4">
+			<!-- COMPETITION TABLE -->
 			<div class="border border-gray-dark/10 rounded-lg shadow-small mt-10 overflow-hidden">
 				<div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
 					<h2 class="font-black text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Série D</h2>
@@ -336,9 +350,13 @@ get_header();
 					</table>
 				</div>
 			</div>
+			<!-- END COMPETITION TABLE -->
 
+			<!-- AD BANNER -->
 			<img class="border border-[#292524]/10 rounded-lg shadow-small mt-8 overflow-hidden" src="<?php echo get_theme_file_uri('/images/banner.png'); ?>" alt="">
+			<!-- END AD BANNER -->
 
+			<!-- MOST VIEWED -->
 			<div class="border border-gray-dark/10 rounded-lg shadow-small mt-10 overflow-hidden">
 				<div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
 					<h2 class="font-black text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Mais Vistas</h2>
@@ -378,6 +396,7 @@ get_header();
 					</article>
 				</div>
 			</div>
+			<!-- END MOST VIEWED -->
 		</div>
 	</div>
 </main>

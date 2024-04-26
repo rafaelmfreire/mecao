@@ -8,7 +8,7 @@ get_header();
 			<article>
 				<div class="rounded-md relative  overflow-hidden shadow">
 					<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent"></div>
-					<img src="<?php echo get_theme_file_uri('/images/rafinha.jpg'); ?>" alt=""> 
+					<img src="<?php echo get_theme_file_uri('/images/rafinha.jpg'); ?>" alt="">
 					<header class="p-6 absolute bottom-0">
 						<div class="flex items-center text-white mb-2">
 							<time class="text-sm font-medium relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-3 before:h-3 before:rounded-full before:bg-red">15/04/2024</time>
@@ -230,7 +230,7 @@ get_header();
 					</div>
 					<div class="grid grid-cols-12">
 						<a class="col-span-6" href="<?php the_permalink(); ?>">
-							<img class="h-full min-h-[265px] object-cover" src="<?php echo get_theme_file_uri('/images/news2.png'); ?>" alt="">
+							<?php the_post_thumbnail('homeNewsPhoto', ['class' => 'h-full min-h-[265px] object-cover']); ?>
 						</a>
 						<div class="p-8 col-span-6">
 							<div class="flex items-center text-blue mb-5">

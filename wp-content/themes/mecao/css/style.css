@@ -76,3 +76,15 @@
         @apply bg-gradient-to-b from-[#2b2b2b] to-[#1c1917];
     }
 }
+
+.page-numbers { @apply bg-red/10 hover:bg-red text-red-dark hover:text-white py-2 px-4 rounded-md font-medium; }
+.page-numbers.prev, .page-numbers.next { @apply bg-red/10 text-red-dark hover:bg-red hover:text-white; }
+.page-numbers.current { @apply bg-stone-300 text-stone-100 cursor-default; }
+.page-numbers.dots { @apply bg-transparent text-stone-500 cursor-default; }
+    .hide-bar {
+        @apply -top-[74px];
+    }
+
+    .show-bar {
+        @apply top-0;
+    }

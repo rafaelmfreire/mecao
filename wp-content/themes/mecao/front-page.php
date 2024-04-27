@@ -4,41 +4,108 @@ get_header();
 
 <main>
 	<div class="bg-white container mx-auto rounded-[24px] py-8 my-6 px-8 grid grid-cols-12 gap-8">
-		<!-- FEATURED -->
-		<?php
-		$featuredNews = new WP_Query([
-			'p' => get_option('sticky_posts')[0]
-		]);
+		<div class="col-span-8">
+			<!-- FEATURED -->
+			<?php
 
-		while ($featuredNews->have_posts()) {
-			$featuredNews->the_post();
-		?>
-			<div class="col-span-8">
-				<a class="group" href="<?php the_permalink(); ?>">
-					<article>
-						<div class="rounded-md relative  overflow-hidden shadow">
-							<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 via-30% to-50%"></div>
-							<?php the_post_thumbnail('featuredPhoto', ['class' => 'w-full object-cover']); ?>
-							<header class="p-6 absolute bottom-0">
-								<h2 class="group-hover:underline text-pretty text-[2.5rem] leading-[2.875rem] font-bold text-white [text-shadow:_2px_2px_2px_rgb(0_0_0_/_50%)]"><?php the_title(); ?></h2>
-							</header>
+			$stickyPost = get_option('sticky_posts')[0];
+
+			if (isset($stickyPost)) {
+				$featuredNews = new WP_Query([
+					'p' => $stickyPost
+				]);
+
+				while ($featuredNews->have_posts()) {
+					$featuredNews->the_post();
+			?>
+					<a class="group" href="<?php the_permalink(); ?>">
+						<article>
+							<div class="rounded-md relative  overflow-hidden shadow">
+								<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 via-30% to-50%"></div>
+								<?php the_post_thumbnail('featuredPhoto', ['class' => 'w-full object-cover']); ?>
+								<header class="p-6 absolute bottom-0">
+									<h2 class="group-hover:underline text-pretty text-[2.5rem] leading-[2.875rem] font-bold text-white [text-shadow:_2px_2px_2px_rgb(0_0_0_/_50%)]"><?php the_title(); ?></h2>
+								</header>
+							</div>
+						</article>
+					</a>
+
+					<div class="flex items-center justify-center mt-14 space-x-8 mb-10">
+						<span class="text-sm font-bold text-gray-dark/85">Parceiro Master</span>
+						<img src="<?php echo get_theme_file_uri('/images/emobi-large.png'); ?>" alt="">
+						<img src="<?php echo get_theme_file_uri('/images/bar.svg'); ?>" alt="">
+						<span class="text-sm font-bold text-gray-dark/85">Seja sócio do América</span>
+						<img src="<?php echo get_theme_file_uri('/images/socio-mecao.png'); ?>" alt="">
+					</div>
+
+			<?php
+				}
+				wp_reset_postdata();
+			}
+			?>
+			<!-- END FEATURED -->
+
+			<div class="space-y-4">
+				<?php
+				$lastNews = new WP_Query([
+					'posts_per_page' => 4,
+					'category_name' => 'noticias',
+					'post__not_in' => get_option('sticky_posts')
+				]);
+
+				while ($lastNews->have_posts()) {
+					$lastNews->the_post(); ?>
+					<article class="relative group bg-white border border-gray-dark/20 rounded-lg shadow-small overflow-hidden">
+						<div class=" hidden group-first-of-type:flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
+							<h2 class="font-black text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Últimas Notícias</h2>
 						</div>
+						<div class="grid grid-cols-12">
+							<?php if (get_the_post_thumbnail()) { ?>
+								<div class="col-span-5">
+									<?php
+									the_post_thumbnail('homeNewsPhoto', ['class' => 'h-full min-h-[265px] object-cover']);
+									?>
+								</div>
+								<div class="p-8 col-span-7">
+								<?php } else { ?>
+									<div class="p-8 col-span-12">
+									<?php } ?>
+									<div class="flex items-center text-blue mb-5">
+										<time class="text-sm font-medium relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-3 before:h-3 before:rounded-full before:bg-red">
+											<?php echo get_the_date('d/m/y H:i'); ?>
+										</time>
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<circle cx="9" cy="17" r="1" fill="#FACC15" />
+											<circle cx="11" cy="14" r="1" fill="#FACC15" />
+											<circle cx="13" cy="11" r="1" fill="#FACC15" />
+											<circle cx="15" cy="8" r="1" fill="#FACC15" />
+										</svg>
+										<span class="uppercase text-xs font-bold tracking-widest"><?php echo get_the_category_list(', '); ?></span>
+									</div>
+									<a href="<?php the_permalink(); ?>">
+										<span class="absolute inset-0"></span>
+										<h3 class="font-bold text-pretty text-xl leading-6 mb-2 line-clamp-3">
+											<?php echo get_the_title(); ?>
+										</h3>
+									</a>
+									<p class="line-clamp-3">
+										<?php echo get_the_excerpt(); ?>
+									</p>
+									</div>
+								</div>
 					</article>
-				</a>
+				<?php
+				}
+				wp_reset_postdata();
+				?>
 
-				<div class="flex items-center justify-center mt-14 space-x-8">
-					<span class="text-sm font-bold text-gray-dark/85">Parceiro Master</span>
-					<img src="<?php echo get_theme_file_uri('/images/emobi-large.png'); ?>" alt="">
-					<img src="<?php echo get_theme_file_uri('/images/bar.svg'); ?>" alt="">
-					<span class="text-sm font-bold text-gray-dark/85">Seja sócio do América</span>
-					<img src="<?php echo get_theme_file_uri('/images/socio-mecao.png'); ?>" alt="">
+				<div class="mt-8 flex justify-center">
+					<a href="<?php echo site_url('/noticias'); ?>" class="bg-white inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-gray-dark/20 shadow-small">
+						Ver mais notícias
+					</a>
 				</div>
 			</div>
-		<?php
-		}
-		wp_reset_postdata();
-		?>
-		<!-- END FEATURED -->
+		</div>
 
 		<section class="col-span-4">
 			<?php
@@ -61,7 +128,7 @@ get_header();
 				$lastMatch->the_post();
 			?>
 				<!-- LAST GAME -->
-				<div class="border border-gray-dark/10 rounded-lg shadow-small mb-8">
+				<div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mb-8">
 					<?php
 					$matchTime = new DateTime(get_field('match_time'));
 					?>
@@ -147,7 +214,7 @@ get_header();
 				$nextMatch->the_post();
 			?>
 				<!-- NEXT GAME -->
-				<div class="border border-gray-dark/10 rounded-lg shadow-small mb-8">
+				<div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mb-8">
 					<?php
 					$matchTime = new DateTime(get_field('match_time'));
 					?>
@@ -220,65 +287,9 @@ get_header();
 			wp_reset_postdata();
 			?>
 
-			<div class="flex justify-center"><a href="<?php echo site_url('/jogos'); ?>" class="inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-[#292524] border-opacity-10 shadow-small">Calendário de Jogos</a></div>
+			<div class="flex justify-center"><a href="<?php echo site_url('/jogos'); ?>" class="bg-white inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-gray-dark/20 shadow-small">Calendário de Jogos</a></div>
 
-		</section>
-
-		<!-- LAST NEWS -->
-		<div class="col-span-8 mt-10 space-y-4">
-			<?php
-			$lastNews = new WP_Query([
-				'posts_per_page' => 5,
-				'category_name' => 'noticias',
-				'post__not_in' => get_option('sticky_posts')
-			]);
-
-			while ($lastNews->have_posts()) {
-				$lastNews->the_post(); ?>
-				<article class="group border border-gray-dark/10 rounded-lg shadow-small overflow-hidden ">
-					<div class=" hidden group-first-of-type:flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
-						<h2 class="font-black text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Últimas Notícias</h2>
-					</div>
-					<div class="grid grid-cols-12">
-						<a class="col-span-6" href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail('homeNewsPhoto', ['class' => 'h-full min-h-[265px] object-cover']); ?>
-						</a>
-						<div class="p-8 col-span-6">
-							<div class="flex items-center text-blue mb-5">
-								<time class="text-sm font-medium relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-3 before:h-3 before:rounded-full before:bg-red">
-									<?php echo get_the_date('d/m/y H:i'); ?>
-								</time>
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<circle cx="9" cy="17" r="1" fill="#FACC15" />
-									<circle cx="11" cy="14" r="1" fill="#FACC15" />
-									<circle cx="13" cy="11" r="1" fill="#FACC15" />
-									<circle cx="15" cy="8" r="1" fill="#FACC15" />
-								</svg>
-								<span class="uppercase text-xs font-bold tracking-widest"><?php echo get_the_category_list(', '); ?></span>
-							</div>
-							<a href="<?php the_permalink(); ?>">
-								<h3 class="font-bold text-pretty text-lg leading-6 mb-2 line-clamp-3">
-									<?php echo get_the_title(); ?>
-								</h3>
-							</a>
-							<p class="line-clamp-3">
-								<?php echo get_the_excerpt(); ?>
-							</p>
-						</div>
-					</div>
-				</article>
-			<?php }
-			wp_reset_postdata();
-			?>
-
-			<div class="mt-8 flex justify-center"><a href="<?php echo site_url('/noticias'); ?>" class="inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-[#292524] border-opacity-10 shadow-small">Ver mais notícias</a></div>
-
-		</div>
-		<!-- END LAST NEWS -->
-
-		<div class="col-span-4">
-			<!-- COMPETITION TABLE -->
-			<div class="border border-gray-dark/10 rounded-lg shadow-small mt-10 overflow-hidden">
+			<div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mt-10 overflow-hidden">
 				<div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
 					<h2 class="font-black text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Série D</h2>
 				</div>
@@ -353,11 +364,11 @@ get_header();
 			<!-- END COMPETITION TABLE -->
 
 			<!-- AD BANNER -->
-			<img class="border border-[#292524]/10 rounded-lg shadow-small mt-8 overflow-hidden" src="<?php echo get_theme_file_uri('/images/banner.png'); ?>" alt="">
+			<img class="border border-gray-dark/20 rounded-lg shadow-small mt-8 overflow-hidden" src="<?php echo get_theme_file_uri('/images/banner.png'); ?>" alt="">
 			<!-- END AD BANNER -->
 
 			<!-- MOST VIEWED -->
-			<div class="border border-gray-dark/10 rounded-lg shadow-small mt-10 overflow-hidden">
+			<div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mt-10 overflow-hidden">
 				<div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
 					<h2 class="font-black text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Mais Vistas</h2>
 				</div>
@@ -396,8 +407,8 @@ get_header();
 					</article>
 				</div>
 			</div>
-			<!-- END MOST VIEWED -->
-		</div>
+		</section>
+
 	</div>
 </main>
 

@@ -8,7 +8,7 @@
 </head>
 
 <body class="bg-red-dark font-sans">
-	<header>
+	<header id="topbar" class="show-bar sticky top-0 w-full bg-red-dark z-50 transition-all duration-300 ease-in-out">
 		<div class="container mx-auto px-8">
 			<div class="flex items-center justify-between pt-3 pb-5">
 				<div class="blue-gradient text-white py-2 px-4 rounded-lg ring-2 ring-white/10 shadow">

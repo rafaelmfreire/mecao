@@ -8,19 +8,23 @@ get_header();
 			the_post();
 		?>
 			<article class="mx-auto col-span-8">
-				<!-- <div class="text-center uppercase font-bold text-blue-dark mb-6 text-sm"><?php the_category(); ?></div> -->
+				<!-- <div class="text-center uppercase font-bold text-blue-dark mb-6 text-sm"> -->
+				<?php
+				// the_category(); 
+				?>
+				<!-- </div> -->
 				<h1 class="text-pretty text-stone-900 text-5xl leading-[1.15em] font-black mb-8"><?php the_title(); ?></h1>
 				<div class="mb-8">
 					<span class="text-stone-700"><?php echo get_the_date('d/m/Y H:i'); ?></span>
 					<span class="text-stone-500">/ Atualizado há <?php echo human_time_diff(get_the_date('U'), (new DateTime())->sub(DateInterval::createFromDateString('3 hours'))->format('U')); ?></span>
 				</div>
-				<?php the_post_thumbnail('featuredPhoto', ['class' => 'w-full object-cover rounded-md mb-8']); ?>
-				<div class="px-8 prose prose-xl prose-red text-pretty">
+				<?php the_post_thumbnail('full', ['class' => 'w-full object-cover rounded-md mb-8']); ?>
+				<div class="py-8 px-8 prose prose-xl prose-red text-pretty selection:bg-red-dark selection:text-white">
 					<?php the_content(); ?>
 				</div>
 			</article>
 			<section class="col-span-4">
-				<div class="border border-gray-dark/10 rounded-lg shadow-small mb-8">
+				<div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mb-8">
 					<header class="flex items-center justify-between bg-gradient-to-r gray-gradient rounded-t-md px-4 py-1">
 						<time class="flex items-center space-x-1">
 							<span class="font-display font-semibold text-[2.5rem] text-yellow leading-none">10</span>
@@ -50,7 +54,7 @@ get_header();
 					</div>
 				</div>
 
-				<div class="border border-gray-dark/10 rounded-lg shadow-small mb-4">
+				<div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mb-4">
 					<header class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-1">
 						<time class="flex items-center space-x-1">
 							<span class="font-display font-semibold text-[2.5rem] text-yellow leading-none">28</span>
@@ -83,7 +87,7 @@ get_header();
 
 				<div class="flex justify-center"><a href="#" class="inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-[#292524] border-opacity-10 shadow-small">Calendário de Jogos</a></div>
 
-				<div class="border border-gray-dark/10 rounded-lg shadow-small mt-10 overflow-hidden">
+				<div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mt-10 overflow-hidden">
 					<div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
 						<h2 class="font-black text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Série D</h2>
 					</div>
@@ -158,7 +162,7 @@ get_header();
 
 				<img class="border border-[#292524]/10 rounded-lg shadow-small mt-8 overflow-hidden" src="<?php echo get_theme_file_uri('/images/banner.png'); ?>" alt="">
 
-				<div class="border border-gray-dark/10 rounded-lg shadow-small mt-10 overflow-hidden">
+				<div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mt-10 overflow-hidden">
 					<div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
 						<h2 class="font-black text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Mais Vistas</h2>
 					</div>

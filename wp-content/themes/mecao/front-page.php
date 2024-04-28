@@ -166,8 +166,12 @@ get_header();
 					</header>
 					<div class="px-4 py-6">
 						<div class="grid grid-cols-home-matches justify-items-stretch">
+							<?php
+							$homeTeam = get_field('home_team');
+							$awayTeam = get_field('away_team');
+							?>
 							<div class="justify-self-start self-end">
-								<img src="<?php echo get_field('home_team'); ?>" alt="">
+								<img src="<?php echo esc_url($homeTeam['url']); ?>" alt="">
 							</div>
 							<div class="justify-self-center">
 								<h3 class="text-center leading-none text-xs text-gray-light font-medium uppercase mb-6">
@@ -176,17 +180,21 @@ get_header();
 								<p class="text-center leading-none text-xs text-gray-light mb-3">Resultado</p>
 								<p class="text-center leading-none text-[2.5rem] mb-6">
 									<span class="score-gradient px-4 py-0 font-display font-semibold text-yellow-dark rounded-lg border-2 border-black">
-										<?php echo get_field('match_score'); ?>
+										<?php echo get_field('home_score') . ' - ' . get_field('away_score'); ?>
 									</span>
 								</p>
 								<a href="<?php the_permalink(); ?>">
-									<p class="text-center leading-none text-lg font-black mb-4 text-gray-dark"><?php the_title(); ?></p>
+									<p class="text-center leading-none text-lg font-black mb-4 text-gray-dark">
+										<?php
+										echo $homeTeam['title'] . ' x ' . $awayTeam['title'];
+										?>
+									</p>
 								</a>
 								<!-- <p class="text-center leading-none text-lg font-black mb-4 text-gray-dark">Santa Cruz <span class="text-stone-400 font-medium">x</span> <span class="text-red-dark">América 🏆</span></p> -->
 								<p class="text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
 							</div>
 							<div class="justify-self-end self-end">
-								<img src="<?php echo get_field('away_team') ?>" alt="">
+								<img src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
 							</div>
 						</div>
 					</div>
@@ -252,8 +260,12 @@ get_header();
 					</header>
 					<div class="px-4 py-6">
 						<div class="grid grid-cols-home-matches justify-items-stretch">
+							<?php
+							$homeTeam = get_field('home_team');
+							$awayTeam = get_field('away_team');
+							?>
 							<div class="justify-self-start self-end">
-								<img class="h-full max-h-[72px] object-cover" src="<?php echo get_field('home_team'); ?>" alt="">
+								<img class="h-full max-h-[72px] object-cover" src="<?php echo esc_url($homeTeam['url']) ?>" alt="">
 							</div>
 							<div class="justify-self-center">
 								<h3 class="text-center leading-none text-xs text-gray-light font-medium uppercase mb-6">
@@ -272,12 +284,16 @@ get_header();
 									</span>
 								</p>
 								<a href="<?php the_permalink(); ?>">
-									<p class="text-center leading-none text-lg font-black mb-4 text-gray-dark"><?php the_title(); ?></p>
+									<p class="text-center leading-none text-lg font-black mb-4 text-gray-dark">
+										<?php
+										echo $homeTeam['title'] . ' x ' . $awayTeam['title'];
+										?>
+									</p>
 								</a>
 								<p class="text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
 							</div>
 							<div class="justify-self-end self-end">
-								<img src="<?php echo get_field('away_team') ?>" alt="">
+								<img src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
 							</div>
 						</div>
 					</div>

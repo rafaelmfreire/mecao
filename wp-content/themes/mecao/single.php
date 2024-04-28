@@ -16,7 +16,7 @@ get_header();
 				<h1 class="text-pretty text-stone-900 text-5xl leading-[1.15em] font-black mb-8"><?php the_title(); ?></h1>
 				<div class="mb-8">
 					<span class="text-stone-700"><?php echo get_the_date('d/m/Y H:i'); ?></span>
-					<span class="text-stone-500">/ Atualizado há <?php echo human_time_diff(get_the_date('U'), (new DateTime())->sub(DateInterval::createFromDateString('3 hours'))->format('U')); ?></span>
+					<span class="text-stone-500">/ Atualizado há <?php echo human_time_diff(get_the_modified_time('U'), (new DateTime())->sub(DateInterval::createFromDateString('3 hours'))->format('U')); ?></span>
 				</div>
 				<?php the_post_thumbnail('full', ['class' => 'w-full object-cover rounded-md mb-8']); ?>
 				<div class="py-8 px-8 prose prose-xl prose-red text-pretty selection:bg-red-dark selection:text-white">

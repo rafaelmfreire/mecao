@@ -71,25 +71,17 @@ get_header();
 						</span>
 					</div>
 				</div>
-				<div class="flex flex-col space-y-8 border-4 border-black/50 score-gradient p-8 w-full rounded-lg">
+				<div class="grid grid-cols-match-score gap-x-8 gap-y-4 border-4 border-black/50 score-gradient p-8 w-full rounded-lg">
 					<?php
 					$homeTeam = get_field('home_team');
 					$awayTeam = get_field('away_team');
 					?>
-					<div class="flex items-center justify-between">
-						<div class="flex items-center space-x-12">
-							<img class="m-0 h-14 w-auto" src="<?php echo esc_url($homeTeam['url']) ?>" alt="">
-							<span class="text-yellow tracking-wider text-6xl uppercase font-display"><?php echo $homeTeam['title']; ?></span>
-						</div>
-						<span class="text-yellow tracking-wider text-6xl uppercase font-display"><?php the_field('home_score'); ?></span>
-					</div>
-					<div class="flex items-center justify-between">
-						<div class="flex items-center space-x-12">
-							<img class="m-0 h-14 w-auto" src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
-							<span class="text-yellow tracking-wider text-6xl uppercase font-display"><?php echo $awayTeam['title']; ?></span>
-						</div>
-						<span class="text-yellow tracking-wider text-6xl uppercase font-display"><?php the_field('away_score'); ?></span>
-					</div>
+					<img class="h-14 w-auto justify-self-center m-0" src="<?php echo esc_url($homeTeam['url']) ?>" alt="">
+					<span class="text-yellow justify-self-stretch tracking-wider text-6xl uppercase font-display"><?php echo $homeTeam['title']; ?></span>
+					<span class="text-yellow tracking-wider text-right text-6xl uppercase font-display"><?php the_field('home_score'); ?>-</span>
+					<img class="h-14 w-auto justify-self-center m-0" src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
+					<span class="text-yellow justify-self-stretch tracking-wider text-6xl uppercase font-display"><?php echo $awayTeam['title']; ?></span>
+					<span class="text-yellow tracking-wider text-right text-6xl uppercase font-display"><?php the_field('away_score'); ?>-</span>
 				</div>
 				<?php the_content(); ?>
 			</article>

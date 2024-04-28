@@ -78,10 +78,10 @@ get_header();
 					?>
 					<img class="h-14 w-auto justify-self-center m-0" src="<?php echo esc_url($homeTeam['url']) ?>" alt="">
 					<span class="text-yellow justify-self-stretch tracking-wider text-6xl uppercase font-display"><?php echo $homeTeam['title']; ?></span>
-					<span class="text-yellow tracking-wider text-right text-6xl uppercase font-display"><?php the_field('home_score'); ?>-</span>
+					<span class="text-yellow tracking-wider text-right text-6xl uppercase font-display"><?php echo get_field('home_score') == '' ? '-' : get_field('home_score'); ?></span>
 					<img class="h-14 w-auto justify-self-center m-0" src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
 					<span class="text-yellow justify-self-stretch tracking-wider text-6xl uppercase font-display"><?php echo $awayTeam['title']; ?></span>
-					<span class="text-yellow tracking-wider text-right text-6xl uppercase font-display"><?php the_field('away_score'); ?>-</span>
+					<span class="text-yellow tracking-wider text-right text-6xl uppercase font-display"><?php echo get_field('away_score') == '' ? '-' : get_field('away_score'); ?></span>
 				</div>
 				<?php the_content(); ?>
 			</article>

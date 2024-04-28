@@ -17,7 +17,7 @@
 					'post_type' => 'match',
 					'meta_query' => [
 						[
-							'key' => 'match_score',
+							'key' => 'home_score',
 							'value' => '',
 							'compare' => '=='
 						],

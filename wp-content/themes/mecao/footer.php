@@ -41,10 +41,7 @@
 		</div>
 		<div class="space-y-6">
 			<h2 class="font-black uppercase">Parceiros</h2>
-			<ul class="space-y-4">
-				<li><img src="<?php echo get_theme_file_uri('/images/emobi-white-large.png'); ?>" alt=""></li>
-			</ul>
-			<div class="flex justify-center"><a href="#" class="inline-block text-sm text-white font-medium px-5 py-3 rounded-md border border-white/30 shadow-small shadow-white/10">Seja parceiro do Portal Mecão</a></div>
+			<a href="#" class="inline-block text-sm text-white font-medium px-5 py-3 rounded-md bg-transparent hover:bg-white hover:text-red border border-white/40 shadow-small hover:shadow-white/10 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a>
 		</div>
 	</div>
 </footer>

@@ -30,7 +30,7 @@
 				if ($nextMatch->have_posts()) {
 					$nextMatch->the_post();
 				?>
-					<div class="relative flex items-center space-x-1 blue-gradient text-white py-2 px-4 rounded-lg ring-2 ring-white/10 shadow">
+					<div class="relative flex items-center space-x-1 blue-gradient text-white py-2 px-4 rounded-lg ring-2 ring-white/10 shadow hover:border-white/70 hover:cursor-pointer hover:shadow-small hover:shadow-white/20 hover:bg-gradient-to-l">
 						<a href="<?php the_permalink(); ?>">
 							<span class="absolute inset-0"></span>
 							<span class="yellow-gradient font-black italic uppercase text-sm inline-block text-transparent bg-clip-text">Próximo Jogo</span>
@@ -89,7 +89,7 @@
 						</button>
 					</div>
 					<div class="flex items-center space-x-4">
-						<span class="font-bold text-sm text-white/85">Parceiro Master</span>
+						<!-- <span class="font-bold text-sm text-white/85">Parceiro Master</span>
 						<svg width="2" height="18" viewBox="0 0 2 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="1" cy="10.5" r="1" fill="#F0C105" />
 							<circle cx="1" cy="13.5" r="1" fill="#F0C105" />
@@ -97,8 +97,12 @@
 							<circle cx="1" cy="7.5" r="1" fill="#F0C105" />
 							<circle cx="1" cy="4.5" r="1" fill="#F0C105" />
 							<circle cx="1" cy="1.5" r="1" fill="#F0C105" />
-						</svg>
-						<img src="<?php echo get_theme_file_uri('/images/emobi-white.png'); ?>" alt="">
+						</svg> -->
+
+						<div class="flex justify-center items-center space-x-4">
+							<span class="font-bold text-sm text-white/85">Parceiro Master</span>
+							<a href="#" class="inline-block text-sm text-white font-medium px-5 py-3 rounded-md bg-transparent hover:bg-white hover:text-red border border-white/40 shadow-small hover:shadow-white/10 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a>
+						</div>
 					</div>
 			</div>
 		</div>
@@ -115,21 +119,23 @@
 					<nav>
 						<ul class="flex items-center space-x-8 text-white font-bold">
 							<a href="<?php echo site_url('/noticias'); ?>">
-								<li class="<?php echo (get_post_type() == 'post' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Notícias</li>
+								<li class="hover:opacity-100 transition-all duration-300 ease-in-out <?php echo (get_post_type() == 'post' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Notícias</li>
 							</a>
 							<a href="<?php echo site_url('/campeonatos'); ?>">
 								<!-- <li class="opacity-80">Campeonatos</li> -->
-								<li class="<?php echo (get_post_type() == 'competition' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Campeonatos</li>
+								<li class="hover:opacity-100 transition-all duration-300 ease-in-out <?php echo (get_post_type() == 'competition' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Campeonatos</li>
 							</a>
 							<a href="<?php echo site_url('/jogos'); ?>">
-								<li class="<?php echo (get_post_type() == 'match' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Jogos</li>
+								<li class="hover:opacity-100 transition-all duration-300 ease-in-out <?php echo (get_post_type() == 'match' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Jogos</li>
 							</a>
-							<a href="<?php echo site_url('/jogadores'); ?>">
+							<!-- <a href="<?php //echo site_url('/jogadores'); 
+											?>">
 								<li class="opacity-80">Jogadores</li>
 							</a>
-							<a href="<?php echo site_url('/envie-sua-noticia'); ?>">
+							<a href="<?php //echo site_url('/envie-sua-noticia'); 
+										?>">
 								<li class="opacity-80">Mande sua notícia</li>
-							</a>
+							</a> -->
 						</ul>
 					</nav>
 					<ul class="flex items-center space-x-8">

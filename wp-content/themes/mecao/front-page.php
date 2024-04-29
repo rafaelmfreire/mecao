@@ -32,10 +32,7 @@ get_header();
 
 					<div class="flex items-center justify-center mt-14 space-x-8 mb-10">
 						<span class="text-sm font-bold text-gray-dark/85">Parceiro Master</span>
-						<img src="<?php echo get_theme_file_uri('/images/emobi-large.png'); ?>" alt="">
-						<img src="<?php echo get_theme_file_uri('/images/bar.svg'); ?>" alt="">
-						<span class="text-sm font-bold text-gray-dark/85">Seja sócio do América</span>
-						<img src="<?php echo get_theme_file_uri('/images/socio-mecao.png'); ?>" alt="">
+						<div class="flex justify-center"><a href="#" class="inline-block text-sm text-red font-medium px-5 py-3 rounded-md bg-transparent hover:bg-red hover:text-white border border-red/40 shadow-small hover:shadow-red/20 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a></div>
 					</div>
 
 			<?php
@@ -100,7 +97,7 @@ get_header();
 				?>
 
 				<div class="mt-8 flex justify-center">
-					<a href="<?php echo site_url('/noticias'); ?>" class="bg-white inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-gray-dark/20 shadow-small">
+					<a href="<?php echo site_url('/noticias'); ?>" class="bg-white inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-gray-dark/20 hover:bg-stone-50 hover:border-gray-dark/40 transition-all duration-300 ease-in-out shadow-small">
 						Ver mais notícias
 					</a>
 				</div>
@@ -164,40 +161,42 @@ get_header();
 						</time>
 						<h2 class="text-gray font-black text-2xl tracking-tighter italic uppercase">Último Jogo</h2>
 					</header>
-					<div class="px-4 py-6">
-						<div class="grid grid-cols-home-matches justify-items-stretch">
-							<?php
-							$homeTeam = get_field('home_team');
-							$awayTeam = get_field('away_team');
-							?>
-							<div class="justify-self-start self-end">
-								<img src="<?php echo esc_url($homeTeam['url']); ?>" alt="">
-							</div>
-							<div class="justify-self-center">
-								<h3 class="text-center leading-none text-xs text-gray-light font-medium uppercase mb-6">
-									<?php echo get_the_title(get_field('match_competition')[0]) ?>
-								</h3>
-								<p class="text-center leading-none text-xs text-gray-light mb-3">Resultado</p>
-								<p class="text-center leading-none text-[2.5rem] mb-6">
-									<span class="score-gradient px-4 py-0 font-display font-semibold text-yellow-dark rounded-lg border-2 border-black">
-										<?php echo get_field('home_score') . ' - ' . get_field('away_score'); ?>
-									</span>
-								</p>
-								<a href="<?php the_permalink(); ?>">
-									<p class="text-center leading-none text-lg font-black mb-4 text-gray-dark">
-										<?php
-										echo $homeTeam['title'] . ' x ' . $awayTeam['title'];
-										?>
+					<a class="group" href="<?php the_permalink(); ?>">
+						<div class="px-4 py-6 group-hover:bg-yellow/5 transition-all duration-1000 ease-in-out">
+							<div class="grid grid-cols-home-matches justify-items-stretch">
+								<?php
+								$homeTeam = get_field('home_team');
+								$awayTeam = get_field('away_team');
+								?>
+								<div class="justify-self-start self-end">
+									<img src="<?php echo esc_url($homeTeam['url']); ?>" alt="">
+								</div>
+								<div class="justify-self-center">
+									<h3 class="text-center leading-none text-xs text-gray-light font-medium uppercase mb-6">
+										<?php echo get_the_title(get_field('match_competition')[0]) ?>
+									</h3>
+									<p class="text-center leading-none text-xs text-gray-light mb-3">Resultado</p>
+									<p class="text-center leading-none text-[2.5rem] mb-6">
+										<span class="score-gradient px-4 py-0 font-display font-semibold text-yellow-dark rounded-lg border-2 border-black">
+											<?php echo get_field('home_score') . ' - ' . get_field('away_score'); ?>
+										</span>
 									</p>
-								</a>
-								<!-- <p class="text-center leading-none text-lg font-black mb-4 text-gray-dark">Santa Cruz <span class="text-stone-400 font-medium">x</span> <span class="text-red-dark">América 🏆</span></p> -->
-								<p class="text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
-							</div>
-							<div class="justify-self-end self-end">
-								<img src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
+									<p class="text-center leading-none text-base font-black mb-4 text-gray-dark">
+										<span class=" <?php echo $homeTeam['title'] == 'América' ? 'text-base uppercase text-red' : ''; ?>">
+											<?php echo $homeTeam['title'] ?>
+										</span>
+										<span> x </span>
+										<span class=" <?php echo $awayTeam['title'] == 'América' ? 'text-sm uppercase text-red' : ''; ?>">
+											<?php echo $awayTeam['title']; ?>
+										</span>
+									<p class="text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
+								</div>
+								<div class="justify-self-end self-end">
+									<img src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
+								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 				<!-- END LAST GAME -->
 			<?php }
@@ -258,52 +257,62 @@ get_header();
 						</time>
 						<h2 class="font-black text-2xl tracking-tighter yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Próximo Jogo</h2>
 					</header>
-					<div class="px-4 py-6">
-						<div class="grid grid-cols-home-matches justify-items-stretch">
-							<?php
-							$homeTeam = get_field('home_team');
-							$awayTeam = get_field('away_team');
-							?>
-							<div class="justify-self-start self-end">
-								<img class="h-full max-h-[72px] object-cover" src="<?php echo esc_url($homeTeam['url']) ?>" alt="">
-							</div>
-							<div class="justify-self-center">
-								<h3 class="text-center leading-none text-xs text-gray-light font-medium uppercase mb-6">
-									<?php
-									echo get_the_title(get_field('match_competition')[0]);
-									?>
-								</h3>
-								<div class="inline-flex items-center space-x-4 mb-6 uppercase text-[0.625rem] text-gray-dark/60 font-medium"><span>Apresentado por</span> <img class="" src="<?php echo get_theme_file_uri('/images/bar.svg'); ?>" alt=""><img src="<?php echo get_theme_file_uri('/images/emobi.png'); ?>" alt=""></div>
-								<p class="text-center leading-none text-xs text-gray-light mb-3">Horário</p>
-								<p class="text-center leading-none text-[2.5rem] mb-6">
-									<span class="score-gradient px-4 py-0 font-display font-semibold text-yellow-dark rounded-lg border-2 border-black">
+					<a href="#" class="group">
+						<div class="flex justify-center items-center space-x-4 p-4 group-hover:bg-red/5 transition-all duration-500 ease-in-out">
+							<span class=" uppercase text-[0.625rem] text-gray-dark/60 font-medium">Apresentado por</span>
+							<img class="" src="<?php echo get_theme_file_uri('/images/bar.svg'); ?>" alt="">
+							<div class="flex justify-center"><span class="inline-block text-xs text-red font-medium px-3 py-2 rounded-md bg-transparent group-hover:bg-red group-hover:text-white border border-red/40 shadow-small group-hover:shadow-red/20 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</div>
+						</div>
+					</a>
+					<a class="group" href="<?php the_permalink(); ?>">
+						<div class="px-4 py-6 group-hover:bg-yellow/5 transition-all duration-1000 ease-in-out">
+							<div class="grid grid-cols-home-matches justify-items-stretch">
+								<?php
+								$homeTeam = get_field('home_team');
+								$awayTeam = get_field('away_team');
+								?>
+								<div class="justify-self-start self-end">
+									<img class="h-full max-h-[72px] object-cover" src="<?php echo esc_url($homeTeam['url']) ?>" alt="">
+								</div>
+								<div class="justify-self-center">
+									<h3 class="text-center leading-none text-xs text-gray-light font-medium uppercase mb-6">
 										<?php
-										$formatter->setPattern('HH:mm');
-										echo $formatter->format($matchTime);
+										echo get_the_title(get_field('match_competition')[0]);
 										?>
-									</span>
-								</p>
-								<a href="<?php the_permalink(); ?>">
-									<p class="text-center leading-none text-lg font-black mb-4 text-gray-dark">
-										<?php
-										echo $homeTeam['title'] . ' x ' . $awayTeam['title'];
-										?>
+									</h3>
+									<p class="text-center leading-none text-xs text-gray-light mb-3">Horário</p>
+									<p class="text-center leading-none text-[2.5rem] mb-6">
+										<span class="score-gradient px-4 py-0 font-display font-semibold text-yellow-dark rounded-lg border-2 border-black">
+											<?php
+											$formatter->setPattern('HH:mm');
+											echo $formatter->format($matchTime);
+											?>
+										</span>
 									</p>
-								</a>
-								<p class="text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
-							</div>
-							<div class="justify-self-end self-end">
-								<img class="h-full max-h-[72px] object-cover" src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
+									<p class="text-center leading-none text-base font-black mb-4 text-gray-dark">
+										<span class=" <?php echo $homeTeam['title'] == 'América' ? 'text-base uppercase text-red' : ''; ?>">
+											<?php echo $homeTeam['title'] ?>
+										</span>
+										<span> x </span>
+										<span class=" <?php echo $awayTeam['title'] == 'América' ? 'text-sm uppercase text-red' : ''; ?>">
+											<?php echo $awayTeam['title']; ?>
+										</span>
+									</p>
+									<p class="text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
+								</div>
+								<div class="justify-self-end self-end">
+									<img class="h-full max-h-[72px] object-cover" src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
+								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 				<!-- END NEXT GAMES -->
 			<?php }
 			wp_reset_postdata();
 			?>
 
-			<div class="flex justify-center"><a href="<?php echo site_url('/jogos'); ?>" class="bg-white inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-gray-dark/20 shadow-small">Calendário de Jogos</a></div>
+			<div class="flex justify-center"><a href="<?php echo site_url('/jogos'); ?>" class="bg-white inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-gray-dark/20 hover:bg-stone-50 hover:border-gray-dark/40 transition-all duration-300 ease-in-out shadow-small">Calendário de Jogos</a></div>
 
 			<div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mt-10 overflow-hidden">
 				<div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">

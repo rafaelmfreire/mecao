@@ -52,7 +52,7 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         'home-matches': '72px 1fr 72px',
-        'match-score': ' 56px minmax(0, 1fr) 80px'
+        'match-score': ' 56px minmax(0, 1fr) 80px',
       }
     },
   },

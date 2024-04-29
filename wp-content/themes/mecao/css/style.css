@@ -61,7 +61,7 @@
 
 @layer utilities {
     .blue-gradient {
-        @apply bg-gradient-to-r from-[#211f70] to-[#171650] hover:bg-gradient-to-l hover:cursor-pointer hover:shadow-small hover:shadow-white/20 transition-all duration-300 ease-in-out border border-transparent hover:border-white/70;
+        @apply bg-gradient-to-r from-[#211f70] to-[#171650] transition-all duration-300 ease-in-out border border-transparent;
     }
 
     .yellow-gradient {

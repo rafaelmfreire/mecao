@@ -38,7 +38,7 @@ module.exports = {
     fontFamily: {
       'sans': ['Satoshi', 'sans-serif'],
       'display': ['Array', 'sans-serif'],
-      'teste': ['vinyl', 'sans-serif'],
+      'mono': ['Roboto Mono'],
     },
     boxShadow: {
       'small': '0 0 10px 0 rgb(0 0 0 / 0.06)',

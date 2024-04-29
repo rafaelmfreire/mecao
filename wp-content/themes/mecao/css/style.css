@@ -88,3 +88,49 @@
     .show-bar {
         @apply top-0;
     }
+
+
+
+.competition-table table thead {
+    @apply border-0 border-b-2 border-b-stone-200;
+}
+
+.competition-table table th {
+    @apply border-none text-stone-400 font-normal mb-6;
+}
+
+.competition-table table th:first-child, .competition-table table th:nth-child(2) {
+    @apply font-bold;
+}
+
+.competition-table table th:first-child {
+    @apply text-left;
+}
+
+.competition-table table, .competition-table table tr {
+    @apply border-none;
+}
+
+.competition-table table tr:last-child td {
+    @apply border-0;
+}
+
+.competition-table table td {
+    @apply text-center border-dotted border-0 border-b-2 border-gray-light/10;
+}
+
+.competition-table table td {
+    @apply text-center font-mono border-dotted border-0 border-b-2 border-gray-light/10 odd:bg-stone-100 first-of-type:bg-transparent;
+}
+
+.competition-table table td:nth-child(2) {
+    @apply text-left font-sans;
+}
+
+.competition-table table td:nth-child(3) {
+    @apply font-bold;
+}
+
+.competition-table table td:first-child {
+    @apply text-blue font-medium;
+}

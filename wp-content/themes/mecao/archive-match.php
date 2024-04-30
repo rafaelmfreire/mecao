@@ -96,7 +96,15 @@ get_header();
 			<?php }
 			wp_reset_postdata(); ?>
 		</div>
-		<!-- <div class="col-span-4"></div> -->
+		<div class="col-span-4">
+
+			<?php get_template_part('template-parts/content', 'lastgame'); ?>
+			<?php get_template_part('template-parts/content', 'nextgame'); ?>
+
+			<div class="flex justify-center"><a href="#" class="inline-block text-sm text-stone-600 font-medium px-5 py-3 rounded-md border border-[#292524] border-opacity-10 shadow-small">Calendário de Jogos</a></div>
+
+			<?php get_template_part('template-parts/content', 'standings'); ?>
+		</div>
 	</div>
 </main>
 

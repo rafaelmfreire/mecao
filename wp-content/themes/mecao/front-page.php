@@ -333,58 +333,58 @@ get_header();
 						</tr>
 						<tr class="border-b-2 border-dotted border-gray-light/10">
 							<td class="px-4 py-3 font-bold">1</td>
-							<td class="px-4 py-3 font-bold text-red">América</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 font-black text-center">0</td>
+							<td class="px-4 py-3 font-bold">Treze</td>
+							<td class="px-4 py-3 text-center">1</td>
+							<td class="px-4 py-3 text-center">4</td>
+							<td class="px-4 py-3 font-black text-center">3</td>
 						</tr>
 						<tr class="border-b-2 border-dotted border-gray-light/10">
-							<td class="px-4 py-3 font-bold">1</td>
-							<td class="px-4 py-3 font-bold">Atlético-CE</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 font-black text-center">0</td>
-						</tr>
-						<tr class="border-b-2 border-dotted border-gray-light/10">
-							<td class="px-4 py-3 font-bold">1</td>
-							<td class="px-4 py-3 font-bold">Iguatu</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 font-bold text-center">0</td>
-						</tr>
-						<tr class="border-b-2 border-dotted border-gray-light/10">
-							<td class="px-4 py-3 font-bold">1</td>
-							<td class="px-4 py-3 font-bold">Maracanã</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 font-bold text-center">0</td>
-						</tr>
-						<tr class="border-b-2 border-dotted border-gray-light/10">
-							<td class="px-4 py-3 font-bold">1</td>
+							<td class="px-4 py-3 font-bold">2</td>
 							<td class="px-4 py-3 font-bold">Potiguar</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 font-bold text-center">0</td>
+							<td class="px-4 py-3 text-center">1</td>
+							<td class="px-4 py-3 text-center">2</td>
+							<td class="px-4 py-3 font-black text-center">3</td>
 						</tr>
 						<tr class="border-b-2 border-dotted border-gray-light/10">
-							<td class="px-4 py-3 font-bold">1</td>
-							<td class="px-4 py-3 font-bold">Santa Cruz-RN</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 font-bold text-center">0</td>
+							<td class="px-4 py-3 font-bold">3</td>
+							<td class="px-4 py-3 font-bold text-red">América</td>
+							<td class="px-4 py-3 text-center">1</td>
+							<td class="px-4 py-3 text-center">1</td>
+							<td class="px-4 py-3 font-bold text-center">1</td>
 						</tr>
 						<tr class="border-b-2 border-dotted border-gray-light/10">
-							<td class="px-4 py-3 font-bold">1</td>
+							<td class="px-4 py-3 font-bold">3</td>
+							<td class="px-4 py-3 font-bold">Maracanã-CE</td>
+							<td class="px-4 py-3 text-center">1</td>
+							<td class="px-4 py-3 text-center">1</td>
+							<td class="px-4 py-3 font-bold text-center">1</td>
+						</tr>
+						<tr class="border-b-2 border-dotted border-gray-light/10">
+							<td class="px-4 py-3 font-bold">5</td>
+							<td class="px-4 py-3 font-bold">Iguatu</td>
+							<td class="px-4 py-3 text-center">1</td>
+							<td class="px-4 py-3 text-center">0</td>
+							<td class="px-4 py-3 font-bold text-center">1</td>
+						</tr>
+						<tr class="border-b-2 border-dotted border-gray-light/10">
+							<td class="px-4 py-3 font-bold">5</td>
 							<td class="px-4 py-3 font-bold">Sousa</td>
+							<td class="px-4 py-3 text-center">1</td>
 							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 text-center">0</td>
+							<td class="px-4 py-3 font-bold text-center">1</td>
+						</tr>
+						<tr class="border-b-2 border-dotted border-gray-light/10">
+							<td class="px-4 py-3 font-bold">7</td>
+							<td class="px-4 py-3 font-bold">Santa Cruz</td>
+							<td class="px-4 py-3 text-center">1</td>
+							<td class="px-4 py-3 text-center">3</td>
 							<td class="px-4 py-3 font-bold text-center">0</td>
 						</tr>
 						<tr>
-							<td class="px-4 py-3 font-bold">1</td>
-							<td class="px-4 py-3 font-bold">Treze</td>
-							<td class="px-4 py-3 text-center">0</td>
-							<td class="px-4 py-3 text-center">0</td>
+							<td class="px-4 py-3 font-bold">8</td>
+							<td class="px-4 py-3 font-bold">Atlético-CE</td>
+							<td class="px-4 py-3 text-center">1</td>
+							<td class="px-4 py-3 text-center">1</td>
 							<td class="px-4 py-3 font-bold text-center">0</td>
 						</tr>
 					</table>

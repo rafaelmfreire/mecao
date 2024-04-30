@@ -32,7 +32,7 @@ get_header();
 
 					<div class="flex items-center justify-center mt-14 space-x-8 mb-10">
 						<span class="text-sm font-bold text-gray-dark/85">Parceiro Master</span>
-						<div class="flex justify-center"><a href="#" class="inline-block text-sm text-red font-medium px-5 py-3 rounded-md bg-transparent hover:bg-red hover:text-white border border-red/40 shadow-small hover:shadow-red/20 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a></div>
+						<div class="flex justify-center"><a href="mailto:contato@mecao.com.br" class="inline-block text-sm text-red font-medium px-5 py-3 rounded-md bg-transparent hover:bg-red hover:text-white border border-red/40 shadow-small hover:shadow-red/20 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a></div>
 					</div>
 
 			<?php
@@ -257,11 +257,15 @@ get_header();
 						</time>
 						<h2 class="font-black text-2xl tracking-tighter yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Próximo Jogo</h2>
 					</header>
-					<a href="#" class="group">
+					<a href="mailto:contato@mecao.com.br" class="group">
 						<div class="flex justify-center items-center space-x-4 p-4 group-hover:bg-red/5 transition-all duration-500 ease-in-out">
 							<span class=" uppercase text-[0.625rem] text-gray-dark/60 font-medium">Apresentado por</span>
 							<img class="" src="<?php echo get_theme_file_uri('/images/bar.svg'); ?>" alt="">
-							<div class="flex justify-center"><span class="inline-block text-xs text-red font-medium px-3 py-2 rounded-md bg-transparent group-hover:bg-red group-hover:text-white border border-red/40 shadow-small group-hover:shadow-red/20 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</div>
+							<div class="flex justify-center">
+								<span class=" text-xs text-red font-medium px-3 py-2 rounded-md bg-transparent group-hover:bg-red group-hover:text-white border border-red/40 shadow-small group-hover:shadow-red/20 transition-all duration-300 ease-in-out">
+									Seja parceiro do Portal Mecão
+								</span>
+							</div>
 						</div>
 					</a>
 					<a class="group" href="<?php the_permalink(); ?>">
@@ -389,11 +393,12 @@ get_header();
 			<!-- END COMPETITION TABLE -->
 
 			<!-- AD BANNER -->
-			<img class="border border-gray-dark/20 rounded-lg shadow-small mt-8 overflow-hidden" src="<?php echo get_theme_file_uri('/images/banner.png'); ?>" alt="">
+			<!-- <img class="border border-gray-dark/20 rounded-lg shadow-small mt-8 overflow-hidden" src="<?php //echo get_theme_file_uri('/images/banner.png'); 
+																											?>" alt=""> -->
 			<!-- END AD BANNER -->
 
 			<!-- MOST VIEWED -->
-			<div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mt-10 overflow-hidden">
+			<!-- <div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mt-10 overflow-hidden">
 				<div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
 					<h2 class="font-black text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Mais Vistas</h2>
 				</div>
@@ -412,7 +417,8 @@ get_header();
 							</div>
 							<h3 class="font-bold text-stone-900 leading-5">Salazar entra para a galeria de heróis improváveis do América-RN</h3>
 						</div>
-						<img src="<?php echo get_theme_file_uri('/images/small-news1.png'); ?>" alt="">
+						<img src="<?php //echo get_theme_file_uri('/images/small-news1.png'); 
+									?>" alt="">
 					</article>
 					<article class="flex items-start space-x-2 py-6">
 						<div>
@@ -428,10 +434,11 @@ get_header();
 							</div>
 							<h3 class="font-bold text-stone-900 leading-5">Ex-Cruzeiro e Palmeiras, Souza é maestro em campanha de título invicto do América-RN</h3>
 						</div>
-						<img src="<?php echo get_theme_file_uri('/images/small-news2.png'); ?>" alt="">
+						<img src="<?php //echo get_theme_file_uri('/images/small-news2.png'); 
+									?>" alt="">
 					</article>
 				</div>
-			</div>
+			</div> -->
 		</section>
 
 	</div>

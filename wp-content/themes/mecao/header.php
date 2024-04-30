@@ -80,14 +80,14 @@
 				wp_reset_postdata();
 					?>
 					</div>
-					<div class="flex items-center space-x-4">
+					<!-- <div class="flex items-center space-x-4">
 						<input type="search" id="mySearch" name="q" class="block w-[400px] rounded-lg border-0 py-3 bg-white/10 shadow text-white ring-1 ring-inset ring-white/35 placeholder:text-white/50 focus:ring-2 focus:ring-inset focus:ring-white/60 sm:text-sm" placeholder="Pesquisar...">
 						<button class="p-3">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M20.9998 21L15.8028 15.803M15.8028 15.803C17.2094 14.3964 17.9996 12.4887 17.9996 10.4995C17.9996 8.51029 17.2094 6.60256 15.8028 5.19599C14.3962 3.78941 12.4885 2.99921 10.4993 2.99921C8.51011 2.99921 6.60238 3.78941 5.19581 5.19599C3.78923 6.60256 2.99902 8.51029 2.99902 10.4995C2.99902 12.4887 3.78923 14.3964 5.19581 15.803C6.60238 17.2096 8.51011 17.9998 10.4993 17.9998C12.4885 17.9998 14.3962 17.2096 15.8028 15.803Z" stroke="white" stroke-opacity="0.35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 							</svg>
 						</button>
-					</div>
+					</div> -->
 					<div class="flex items-center space-x-4">
 						<!-- <span class="font-bold text-sm text-white/85">Parceiro Master</span>
 						<svg width="2" height="18" viewBox="0 0 2 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +101,7 @@
 
 						<div class="flex justify-center items-center space-x-4">
 							<span class="font-bold text-sm text-white/85">Parceiro Master</span>
-							<a href="#" class="inline-block text-sm text-white font-medium px-5 py-3 rounded-md bg-transparent hover:bg-white hover:text-red border border-white/40 shadow-small hover:shadow-white/10 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a>
+							<a href="mailto:contato@mecao.com.br" class="inline-block text-sm text-white font-medium px-5 py-3 rounded-md bg-transparent hover:bg-white hover:text-red border border-white/40 shadow-small hover:shadow-white/10 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a>
 						</div>
 					</div>
 			</div>
@@ -140,10 +140,10 @@
 					</nav>
 					<ul class="flex items-center space-x-8">
 						<li>
-							<img src="<?php echo get_theme_file_uri('/images/instagram.svg'); ?>" alt="">
+							<a href="https://instagram.com/portalmecao" target="_blank"><img src="<?php echo get_theme_file_uri('/images/instagram.svg'); ?>" alt=""></a>
 						</li>
 						<li>
-							<img src="<?php echo get_theme_file_uri('/images/twitter.svg'); ?>" alt="">
+							<a href="https://twitter.com/portalmecao" target="_blank"><img src="<?php echo get_theme_file_uri('/images/twitter.svg'); ?>" alt=""></a>
 						</li>
 					</ul>
 				</div>

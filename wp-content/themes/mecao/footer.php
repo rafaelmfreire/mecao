@@ -18,7 +18,7 @@
 			<h2 class="font-black uppercase">Time Principal</h2>
 			<ul class="space-y-4">
 				<li><a href="<?php echo site_url('/campeonatos') ?>">Campeonatos</a></li>
-				<li>Jogos</li>
+				<li><a href="<?php echo site_url('/jogos') ?>">Jogos</a></li>
 			</ul>
 		</div>
 		<!-- <div class="space-y-6">

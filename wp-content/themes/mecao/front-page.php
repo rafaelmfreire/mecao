@@ -169,7 +169,7 @@ get_header();
 								$awayTeam = get_field('away_team');
 								?>
 								<div class="justify-self-start self-end">
-									<img src="<?php echo esc_url($homeTeam['url']); ?>" alt="">
+									<img class="h-full max-h-[72px] object-cover" src="<?php echo esc_url($homeTeam['url']) ?>" alt="">
 								</div>
 								<div class="justify-self-center">
 									<h3 class="text-center leading-none text-xs text-gray-light font-medium uppercase mb-6">
@@ -192,7 +192,7 @@ get_header();
 									<p class="text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
 								</div>
 								<div class="justify-self-end self-end">
-									<img src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
+									<img class="h-full max-h-[72px] object-cover" src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
 								</div>
 							</div>
 						</div>

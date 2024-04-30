@@ -7,7 +7,7 @@ get_header();
 		<?php while (have_posts()) {
 			the_post();
 		?>
-			<article class="mx-auto col-span-8">
+			<article class="mx-auto col-span-8 w-full">
 				<!-- <div class="text-center uppercase font-bold text-blue-dark mb-6 text-sm"> -->
 				<?php
 				// the_category(); 

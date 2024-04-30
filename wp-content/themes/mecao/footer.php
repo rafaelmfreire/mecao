@@ -10,19 +10,18 @@
 		<div class="space-y-6">
 			<h2 class="font-black uppercase">Notícias</h2>
 			<ul class="space-y-4">
-				<li>Últimas Notícias</li>
-				<li>Mais Vistas</li>
+				<li><a href="<?php echo site_url('/noticias') ?>">Últimas Notícias</a></li>
+				<!-- <li>Mais Vistas</li> -->
 			</ul>
 		</div>
 		<div class="space-y-6">
-			<h2 class="font-black uppercase">Jogos</h2>
+			<h2 class="font-black uppercase">Time Principal</h2>
 			<ul class="space-y-4">
-				<li>Calendário</li>
-				<li>Resultados</li>
-				<li>Tabelas</li>
+				<li><a href="<?php echo site_url('/campeonatos') ?>">Campeonatos</a></li>
+				<li>Jogos</li>
 			</ul>
 		</div>
-		<div class="space-y-6">
+		<!-- <div class="space-y-6">
 			<h2 class="font-black uppercase">Jogadores</h2>
 			<ul class="space-y-4">
 				<li>Goleiro</li>
@@ -30,15 +29,14 @@
 				<li>Meio-Campo</li>
 				<li>Ataque</li>
 			</ul>
-		</div>
 		<div class="space-y-6">
-			<h2 class="font-black uppercase">Links</h2>
+			<h2 class="font-black uppercase">Fale Conosco</h2>
 			<ul class="space-y-4">
 				<li>Mande sua foto</li>
 				<li>Envie uma notícia</li>
-				<li>Contato</li>
+				<li><a href="mailto:contato@mecao.com.br">Contato</a></li>
 			</ul>
-		</div>
+		</div> -->
 		<div class="space-y-6">
 			<h2 class="font-black uppercase">Parceiros</h2>
 			<a href="mailto:contato@mecao.com.br" class="inline-block text-sm text-white font-medium px-5 py-3 rounded-md bg-transparent hover:bg-white hover:text-red border border-white/40 shadow-small hover:shadow-white/10 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a>

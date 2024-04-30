@@ -2,58 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    @font-face {
-        font-family: 'Array';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(../fonts/Array-Regular.woff2) format('woff2');
-    }
-    @font-face {
-        font-family: 'Array';
-        font-style: normal;
-        font-weight: 600;
-        font-display: swap;
-        src: url(../fonts/Array-Semibold.woff2) format('woff2');
-    }
-    @font-face {
-        font-family: 'Satoshi';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url(../fonts/Satoshi-Regular.woff2) format('woff2');
-    }
-    @font-face {
-        font-family: 'Satoshi';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url(../fonts/Satoshi-Medium.woff2) format('woff2');
-    }
-    @font-face {
-        font-family: 'Satoshi';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url(../fonts/Satoshi-Bold.woff2) format('woff2');
-    }
-    @font-face {
-        font-family: 'Satoshi';
-        font-style: normal;
-        font-weight: 900;
-        font-display: swap;
-        src: url(../fonts/Satoshi-Black.woff2) format('woff2');
-    }
-    @font-face {
-        font-family: 'Satoshi';
-        font-style: italic;
-        font-weight: 800;
-        font-display: swap;
-        src: url(../fonts/Satoshi-BlackItalic.woff2) format('woff2');
-    }
-}
-
 @layer utilities {
     .blue-gradient {
         @apply bg-gradient-to-r from-[#211f70] to-[#171650] transition-all duration-300 ease-in-out border border-transparent;

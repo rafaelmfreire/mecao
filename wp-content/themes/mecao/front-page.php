@@ -18,7 +18,7 @@ get_header();
 				while ($featuredNews->have_posts()) {
 					$featuredNews->the_post();
 			?>
-					<a class="group" href="<?php the_permalink(); ?>">
+					<a class="block group mb-14" href="<?php the_permalink(); ?>">
 						<article>
 							<div class="rounded-md relative  overflow-hidden shadow">
 								<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 via-30% to-50%"></div>
@@ -30,7 +30,7 @@ get_header();
 						</article>
 					</a>
 
-					<div class="hidden sm:flex items-center justify-center mt-14 space-x-8 mb-10">
+					<div class="hidden sm:flex items-center justify-center space-x-8 pb-10">
 						<span class="text-sm font-bold text-gray-dark/85">Parceiro Master</span>
 						<div class="flex justify-center"><a href="mailto:contato@mecao.com.br" class="inline-block text-sm text-red font-medium px-5 py-3 rounded-md bg-transparent hover:bg-red hover:text-white border border-red/40 shadow-small hover:shadow-red/20 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a></div>
 					</div>

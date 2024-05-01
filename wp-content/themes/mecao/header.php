@@ -9,8 +9,8 @@
 
 <body class="bg-red-dark font-sans">
 	<header id="topbar" class="show-bar sticky top-0 w-full bg-red-dark z-50 transition-all duration-300 ease-in-out">
-		<div class="container mx-auto px-8">
-			<div class="flex items-center justify-between pt-3 pb-5">
+		<div class="container mx-auto px-4 sm:px-8 py-2 sm:py-0">
+			<div class="flex flex-col-reverse sm:flex-row gap-4 sm:gap-0 items-center justify-between pt-3 pb-5">
 				<?php
 				$nextMatch = new WP_Query([
 					'posts_per_page' => 1,
@@ -30,12 +30,12 @@
 				if ($nextMatch->have_posts()) {
 					$nextMatch->the_post();
 				?>
-					<div class="relative flex items-center space-x-1 blue-gradient text-white py-2 px-4 rounded-lg ring-2 ring-white/10 shadow hover:border-white/70 hover:cursor-pointer hover:shadow-small hover:shadow-white/20 hover:bg-gradient-to-l">
+					<div class="relative flex items-center w-full sm:w-auto justify-between space-x-1 blue-gradient text-white py-2 px-4 rounded-lg ring-2 ring-white/10 shadow hover:border-white/70 hover:cursor-pointer hover:shadow-small hover:shadow-white/20 hover:bg-gradient-to-l">
 						<a href="<?php the_permalink(); ?>">
 							<span class="absolute inset-0"></span>
-							<span class="yellow-gradient font-black italic uppercase text-sm inline-block text-transparent bg-clip-text">Próximo Jogo</span>
+							<span class="yellow-gradient font-black italic uppercase text-xs sm:text-sm inline-block text-transparent bg-clip-text">Próximo Jogo</span>
 						</a>
-						<svg class="inline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="hidden sm:inline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="9" cy="17" r="1" fill="#FACC15" />
 							<circle cx="7" cy="20" r="1" fill="#FACC15" />
 							<circle cx="11" cy="14" r="1" fill="#FACC15" />
@@ -53,7 +53,7 @@
 							IntlDateFormatter::GREGORIAN,
 						);
 						?>
-						<span class="text-sm font-medium capitalize">
+						<span class="text-xs sm:text-sm font-medium capitalize">
 							<?php
 							$formatter->setPattern('E dd LLL');
 							echo $formatter->format($matchTime);
@@ -64,7 +64,7 @@
 							<span>x</span>
 							<img class="h-7 w-auto" src="<?php echo get_field('away_team')['url'] ?>" alt="">
 						</div>
-						<svg class="inline ml-12" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="hidden sm:inline ml-12" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="8" cy="20" r="1" fill="#FACC15" />
 							<circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 7 5)" fill="#FACC15" />
 							<circle cx="10" cy="18" r="1" fill="#FACC15" />
@@ -88,21 +88,10 @@
 							</svg>
 						</button>
 					</div> -->
-					<div class="flex items-center space-x-4">
-						<!-- <span class="font-bold text-sm text-white/85">Parceiro Master</span>
-						<svg width="2" height="18" viewBox="0 0 2 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="1" cy="10.5" r="1" fill="#F0C105" />
-							<circle cx="1" cy="13.5" r="1" fill="#F0C105" />
-							<circle cx="1" cy="16.5" r="1" fill="#F0C105" />
-							<circle cx="1" cy="7.5" r="1" fill="#F0C105" />
-							<circle cx="1" cy="4.5" r="1" fill="#F0C105" />
-							<circle cx="1" cy="1.5" r="1" fill="#F0C105" />
-						</svg> -->
 
-						<div class="flex justify-center items-center space-x-4">
-							<span class="font-bold text-sm text-white/85">Parceiro Master</span>
-							<a href="mailto:contato@mecao.com.br" class="inline-block text-sm text-white font-medium px-5 py-3 rounded-md bg-transparent hover:bg-white hover:text-red border border-white/40 shadow-small hover:shadow-white/10 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a>
-						</div>
+					<div class="w-full sm:w-auto flex justify-between sm:justify-center items-center sm:space-x-4">
+						<span class="block sm:inline font-bold text-xs sm:text-sm text-white/85">Parceiro Master</span>
+						<a href="mailto:contato@mecao.com.br" class="block sm:inline-block text-xs sm:text-sm text-white font-medium px-5 py-3 rounded-md bg-transparent hover:bg-white hover:text-red border border-white/40 shadow-small hover:shadow-white/10 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a>
 					</div>
 			</div>
 		</div>
@@ -115,7 +104,7 @@
 						<h1 class="pl-16 font-display text-yellow text-4xl">Portal Mecão</h1>
 					</div>
 				</a>
-				<div class="flex items-center space-x-20">
+				<div class="hidden sm:flex items-center space-x-20">
 					<nav>
 						<ul class="flex items-center space-x-8 text-white font-bold">
 							<a href="<?php echo site_url('/noticias'); ?>">

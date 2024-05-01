@@ -1,5 +1,5 @@
 <footer class="py-8 bg-red">
-	<div class="container mx-auto px-8 text-white flex items-start justify-between">
+	<div class="container mx-auto px-8 text-white flex flex-col sm:flex-row items-start justify-between space-y-4 sm:space-y-0">
 		<div class="flex flex-col self-stretch justify-between">
 			<div class="flex items-center space-x-2 -ml-2">
 				<img src="<?php echo get_theme_file_uri('/images/mecao-white.svg'); ?>" alt="">
@@ -7,14 +7,14 @@
 			</div>
 			<p class="font-medium text-sm">© Portal Mecão 2024 | Todos os direitos reservados.</p>
 		</div>
-		<div class="space-y-6">
+		<div class="hidden sm:block space-y-6">
 			<h2 class="font-black uppercase">Notícias</h2>
 			<ul class="space-y-4">
 				<li><a href="<?php echo site_url('/noticias') ?>">Últimas Notícias</a></li>
 				<!-- <li>Mais Vistas</li> -->
 			</ul>
 		</div>
-		<div class="space-y-6">
+		<div class="hidden sm:block space-y-6">
 			<h2 class="font-black uppercase">Time Principal</h2>
 			<ul class="space-y-4">
 				<li><a href="<?php echo site_url('/campeonatos') ?>">Campeonatos</a></li>

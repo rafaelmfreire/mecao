@@ -37,14 +37,14 @@ if ($lastMatch->have_posts()) {
                         IntlDateFormatter::GREGORIAN,
                     );
                     ?>
-                    <span class="block uppercase leading-none text-white font-black text-sm">
+                    <span class="block uppercase leading-none text-white font-black text-xs sm:text-sm">
                         <?php
                         $formatter->setPattern('cccc');
                         echo $formatter->format($matchTime);
                         ?>
 
                     </span>
-                    <span class="block uppercase leading-none text-white text-sm">
+                    <span class="block uppercase leading-none text-white text-xs sm:text-sm">
                         <?php
                         $formatter->setPattern('MMMM');
                         echo $formatter->format($matchTime);
@@ -52,7 +52,7 @@ if ($lastMatch->have_posts()) {
                     </span>
                 </div>
             </time>
-            <h2 class="text-gray font-black text-2xl tracking-tighter italic uppercase">Último Jogo</h2>
+            <h2 class="text-gray font-black text-xl sm:text-2xl tracking-tighter italic uppercase">Último Jogo</h2>
         </header>
         <a class="group" href="<?php the_permalink(); ?>">
             <div class="px-4 py-6 group-hover:bg-yellow/5 transition-all duration-1000 ease-in-out">
@@ -74,7 +74,7 @@ if ($lastMatch->have_posts()) {
                                 <?php echo get_field('home_score') . ' - ' . get_field('away_score'); ?>
                             </span>
                         </p>
-                        <p class="text-center leading-none text-base font-black mb-4 text-gray-dark">
+                        <p class="hidden sm:block text-center leading-none text-base font-black mb-4 text-gray-dark">
                             <span class=" <?php echo $homeTeam['title'] == 'América' ? 'text-base uppercase text-red' : ''; ?>">
                                 <?php echo $homeTeam['title'] ?>
                             </span>
@@ -82,7 +82,7 @@ if ($lastMatch->have_posts()) {
                             <span class=" <?php echo $awayTeam['title'] == 'América' ? 'text-sm uppercase text-red' : ''; ?>">
                                 <?php echo $awayTeam['title']; ?>
                             </span>
-                        <p class="text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
+                        <p class="hidden sm:block text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
                     </div>
                     <div class="justify-self-end self-end">
                         <img class="h-full max-h-[72px] object-cover" src="<?php echo esc_url($awayTeam['url']) ?>" alt="">

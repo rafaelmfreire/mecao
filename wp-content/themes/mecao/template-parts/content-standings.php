@@ -1,9 +1,9 @@
 <div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mt-10 overflow-hidden">
     <div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
-        <h2 class="font-black text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Série D</h2>
+        <h2 class="font-black sm:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Série D</h2>
     </div>
     <div class="px-4 py-4 w-full">
-        <table class="min-w-full text-stone-900">
+        <table class="min-w-full text-sm sm:text-base text-stone-900">
             <tr>
                 <th class="p-4 text-center font-normal text-stone-400">#</th>
                 <th class="p-4 text-left font-bold text-stone-400 w-full">Equipe</th>

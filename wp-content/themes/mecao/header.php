@@ -33,7 +33,7 @@
 					<div class="relative flex items-center w-full md:w-auto justify-between space-x-1 blue-gradient text-white py-2 px-4 rounded-lg ring-2 ring-white/10 shadow hover:border-white/70 hover:cursor-pointer hover:shadow-small hover:shadow-white/20 hover:bg-gradient-to-l">
 						<a href="<?php the_permalink(); ?>">
 							<span class="absolute inset-0"></span>
-							<span class="yellow-gradient font-black italic uppercase text-xs md:text-sm inline-block text-transparent bg-clip-text">Próximo Jogo</span>
+							<span class="yellow-gradient font-black italic uppercase text-xs lg:text-sm inline-block text-transparent bg-clip-text">Próximo Jogo</span>
 						</a>
 						<svg class="hidden md:inline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="9" cy="17" r="1" fill="#FACC15" />
@@ -53,7 +53,7 @@
 							IntlDateFormatter::GREGORIAN,
 						);
 						?>
-						<span class="text-xs md:text-sm font-medium capitalize">
+						<span class="text-xs lg:text-sm font-medium capitalize">
 							<?php
 							$formatter->setPattern('E dd LLL');
 							echo $formatter->format($matchTime);
@@ -90,7 +90,7 @@
 					</div> -->
 
 					<div class="w-full md:w-auto flex justify-between md:justify-center items-center md:space-x-4">
-						<span class="block md:inline font-bold text-xs md:text-sm text-white/85">Parceiro Master</span>
+						<span class="block lg:inline font-bold text-xs lg:text-sm text-white/85">Parceiro Master</span>
 						<a href="mailto:contato@mecao.com.br" class="block md:inline-block text-xs md:text-sm text-white font-medium px-5 py-3 rounded-md bg-transparent hover:bg-white hover:text-red border border-white/40 shadow-small hover:shadow-white/10 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a>
 					</div>
 			</div>
@@ -104,7 +104,7 @@
 						<h1 class="pl-16 font-display text-yellow text-4xl">Portal Mecão</h1>
 					</div>
 				</a>
-				<div class="hidden md:flex items-center space-x-20">
+				<div class="hidden md:flex items-center md:space-x-10 lg:space-x-20">
 					<nav>
 						<ul class="flex items-center space-x-8 text-white font-bold">
 							<a href="<?php echo site_url('/noticias'); ?>">

@@ -37,14 +37,14 @@ if ($nextMatch->have_posts()) {
                         IntlDateFormatter::GREGORIAN,
                     );
                     ?>
-                    <span class="block uppercase leading-none text-white font-black  text-xs sm:text-sm">
+                    <span class="block uppercase leading-none text-white font-black  text-xs lg:text-sm">
                         <?php
                         $formatter->setPattern('cccc');
                         echo $formatter->format($matchTime);
                         ?>
 
                     </span>
-                    <span class="block uppercase leading-none text-white  text-xs sm:text-sm">
+                    <span class="block uppercase leading-none text-white  text-xs lg:text-sm">
                         <?php
                         $formatter->setPattern('MMMM');
                         echo $formatter->format($matchTime);
@@ -52,9 +52,9 @@ if ($nextMatch->have_posts()) {
                     </span>
                 </div>
             </time>
-            <h2 class="font-black text-xl sm:text-2xl tracking-tighter yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Próximo Jogo</h2>
+            <h2 class="font-black text-xl lg:text-2xl tracking-tighter yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Próximo Jogo</h2>
         </header>
-        <a href="mailto:contato@mecao.com.br" class="group">
+        <a href="mailto:contato@mecao.com.br" class="group md:hidden lg:inline">
             <div class="flex justify-center items-center space-x-4 p-4 group-hover:bg-red/5 transition-all duration-500 ease-in-out">
                 <span class="hidden sm:inline uppercase text-[0.625rem] text-gray-dark/60 font-medium">Apresentado por</span>
                 <img class="hidden sm:block" src="<?php echo get_theme_file_uri('/images/bar.svg'); ?>" alt="">
@@ -90,7 +90,7 @@ if ($nextMatch->have_posts()) {
                                 ?>
                             </span>
                         </p>
-                        <p class="hidden sm:block text-center leading-none text-base font-black mb-4 text-gray-dark">
+                        <p class="hidden lg:block text-center leading-none text-base font-black mb-4 text-gray-dark">
                             <span class=" <?php echo $homeTeam['title'] == 'América' ? 'text-base uppercase text-red' : ''; ?>">
                                 <?php echo $homeTeam['title'] ?>
                             </span>
@@ -99,7 +99,7 @@ if ($nextMatch->have_posts()) {
                                 <?php echo $awayTeam['title']; ?>
                             </span>
                         </p>
-                        <p class="hidden sm:block text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
+                        <p class="hidden lg:block text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
                     </div>
                     <div class="justify-self-end self-end">
                         <img class="h-full max-h-[72px] object-cover" src="<?php echo esc_url($awayTeam['url']) ?>" alt="">

@@ -1,14 +1,10 @@
 <IfModule mod_rewrite.c>
-    RewriteEngine on
-    RewriteCond %{HTTP_HOST} ^(www.)?localhost$
-    RewriteCond %{REQUEST_URI} !^/mecao/wordpress/
+  RewriteEngine on
+  RewriteCond %{HTTP_HOST} ^(www.)?mecao.com.br$
+    RewriteCond %{REQUEST_URI} !^/wordpress/
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /mecao/wordpress/$1
-    RewriteCond %{HTTP_HOST} ^(www.)?localhost$
-    RewriteRule ^(/)?$ mecao/wordpress/index.php [L]
+    RewriteRule ^(.*)$ /wordpress/$1 [L]
+    RewriteCond %{HTTP_HOST} ^(www.)?mecao.com.br$
+    RewriteRule ^(/)?$ wordpress/index.php [L]
 </IfModule>
-php_value upload_max_filesize 32M
-php_value post_max_size 32M
-php_value max_execution_time 300
-php_value max_input_time 300

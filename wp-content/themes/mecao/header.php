@@ -8,7 +8,7 @@
 </head>
 
 <body class="bg-red-dark font-sans">
-	<header id="topbar" class="show-bar sticky top-0 w-full bg-red-dark z-50 transition-all duration-300 ease-in-out">
+	<header id="topbar" class="show-bar sticky top-0 w-full bg-red-dark z-50 transition-all duration-300 ease-in-out flex flex-col">
 		<div class="container mx-auto px-4 md:px-8 py-2 md:py-0">
 			<div class="flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-center justify-between pt-3 pb-5">
 				<?php
@@ -96,7 +96,7 @@
 			</div>
 		</div>
 
-		<div class="bg-red shadow">
+		<div class="bg-red shadow" x-data="{ open: false }">
 			<div class="container mx-auto flex items-center justify-between py-1 px-8">
 				<a href="<?php echo site_url(); ?>">
 					<div class="flex items-center space-x-4 -ml-3">
@@ -136,6 +136,48 @@
 						</li>
 					</ul>
 				</div>
+				<div class="flex md:hidden" @click="open = true">
+					<button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
+						<span class="sr-only">Open main menu</span>
+						<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+						</svg>
+					</button>
+				</div>
+				<div class="lg:hidden" role="dialog" aria-modal="true" x-show="open">
+					<!-- Background backdrop, show/hide based on slide-over state. -->
+					<div class="fixed inset-0 z-50"></div>
+					<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-red/90 backdrop-blur-lg px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/70">
+						<div class="flex items-center justify-between">
+							<a href="<?php echo site_url(); ?>" class="-ml-4 p-1.5">
+								<span class="sr-only">Portal Mecão</span>
+								<img class="h-20" src="<?php echo get_theme_file_uri('/images/logo_mecao.svg'); ?>" alt="" />
+							</a>
+							<button type="button" class="-m-2.5 rounded-md p-2.5 bg-white/20 text-white" @click="open = false">
+								<span class="sr-only">Fechar menu</span>
+								<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+								</svg>
+							</button>
+						</div>
+						<div class="mt-6 flow-root">
+							<div class="-my-6 divide-y divide-white/30">
+								<div class="space-y-2 py-6">
+									<a href="<?php echo site_url('/noticias'); ?>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/20 <?php echo (get_post_type() == 'post' ? 'bg-yellow/20' : ''); ?>">Notícias</a>
+									<a href="<?php echo site_url('/campeonatos'); ?>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/20 <?php echo (get_post_type() == 'competition' ? 'bg-yellow/20' : ''); ?>">Campeonatos</a>
+									<a href="<?php echo site_url('/jogos'); ?>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/20 <?php echo (get_post_type() == 'match' ? 'bg-yellow/20' : ''); ?>">Jogos</a>
+								</div>
+								<div class="py-6 flex items-center space-x-6">
+									<a href="https://instagram.com/portalmecao" target="_blank" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+										<img src="<?php echo get_theme_file_uri('/images/instagram.svg'); ?>" alt="Instagram Portal Mecão">
+									</a>
+									<a href="https://twitter.com/portalmecao" target="_blank" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+										<img src="<?php echo get_theme_file_uri('/images/twitter.svg'); ?>" alt="Twitter Portal Mecão">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
 	</header>

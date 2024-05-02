@@ -88,10 +88,10 @@ get_header();
 										$score = get_field('home_score') . ' - ' . get_field('away_score');
 										?>
 										<div class="w-full">
-											<div class="flex items-center justify-center space-x-8">
-												<span class="w-full font-bold text-lg <?php echo $homeTeam['title'] == 'América' ? 'uppercase text-red' : ''; ?> text-right"><?php echo $homeTeam['title']; ?></span>
-												<img class="max-h-[72px] my-0 justify-self-end object-cover" src="<?php echo esc_url($homeTeam['url']) ?>" alt="">
-												<span class="text-center justify-self-center text-[2.5rem] pt-4">
+											<div class="flex items-center justify-center">
+												<span class="w-full font-bold hidden lg:text-lg <?php echo $homeTeam['title'] == 'América' ? 'uppercase text-red' : ''; ?> text-right"><?php echo $homeTeam['title']; ?></span>
+												<img class="max-h-[72px] my-0 justify-self-start object-cover" src="<?php echo esc_url($homeTeam['url']) ?>" alt="">
+												<span class="text-center justify-self-center text-[2.5rem] pt-4 px-8">
 													<span class="score-gradient text-nowrap px-4 py-0 font-display font-semibold text-yellow-dark rounded-lg border-2 border-black">
 														<?php
 														echo $score;
@@ -100,7 +100,7 @@ get_header();
 													<p class="text-center tracking-wider text-[0.6875rem] text-gray-dark m-0"><?php echo get_field('match_stadium'); ?></p>
 												</span>
 												<img class="max-h-[72px] my-0 justify-self-start object-cover" src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
-												<span class="w-full text-lg <?php echo $awayTeam['title'] == 'América' ? 'uppercase text-red' : ''; ?> font-bold"><?php echo $awayTeam['title']; ?></span>
+												<span class="w-full hidden lg:text-lg <?php echo $awayTeam['title'] == 'América' ? 'uppercase text-red' : ''; ?> font-bold"><?php echo $awayTeam['title']; ?></span>
 											</div>
 										</div>
 									</div>
@@ -182,10 +182,10 @@ get_header();
 										}
 										?>
 										<div class="w-full">
-											<div class="flex items-center justify-center space-x-8">
-												<span class="w-full font-bold text-lg <?php echo $homeTeam['title'] == 'América' ? 'uppercase text-red' : ''; ?> text-right"><?php echo $homeTeam['title']; ?></span>
-												<img class="max-h-[72px] my-0 justify-self-end object-cover" src="<?php echo esc_url($homeTeam['url']) ?>" alt="">
-												<span class="text-center justify-self-center text-[2.5rem] pt-4">
+											<div class="flex items-center justify-center">
+												<span class="w-full font-bold hidden md:inline text-lg mr-4 <?php echo $homeTeam['title'] == 'América' ? 'uppercase text-red' : ''; ?> text-right"><?php echo $homeTeam['title']; ?></span>
+												<img class="max-h-[72px] my-0 object-cover" src="<?php echo esc_url($homeTeam['url']) ?>" alt="">
+												<span class="text-center text-[2.5rem] pt-4 px-8">
 													<span class="score-gradient text-nowrap px-4 py-0 font-display font-semibold text-yellow-dark rounded-lg border-2 border-black">
 														<?php
 														echo $score;
@@ -193,8 +193,8 @@ get_header();
 													</span>
 													<p class="text-center text-nowrap tracking-wider text-[0.6875rem] text-gray-dark m-0"><?php echo get_field('match_stadium'); ?></p>
 												</span>
-												<img class="max-h-[72px] my-0 justify-self-start object-cover" src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
-												<span class="w-full text-lg <?php echo $awayTeam['title'] == 'América' ? 'uppercase text-red' : ''; ?> font-bold"><?php echo $awayTeam['title']; ?></span>
+												<img class="max-h-[72px] my-0 object-cover" src="<?php echo esc_url($awayTeam['url']) ?>" alt="">
+												<span class="w-full hidden md:inline text-lg ml-4 <?php echo $awayTeam['title'] == 'América' ? 'uppercase text-red' : ''; ?> font-bold"><?php echo $awayTeam['title']; ?></span>
 											</div>
 										</div>
 									</div>

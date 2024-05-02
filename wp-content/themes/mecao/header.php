@@ -138,7 +138,7 @@
 				</div>
 				<div class="flex md:hidden" @click="open = true">
 					<button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
-						<span class="sr-only">Open main menu</span>
+						<!-- <span class="sr-only">Open main menu</span> -->
 						<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 						</svg>
@@ -150,11 +150,11 @@
 					<div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-red/90 backdrop-blur-lg px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/70">
 						<div class="flex items-center justify-between">
 							<a href="<?php echo site_url(); ?>" class="-ml-4 p-1.5">
-								<span class="sr-only">Portal Mecão</span>
+								<!-- <span class="sr-only">Portal Mecão</span> -->
 								<img class="h-20" src="<?php echo get_theme_file_uri('/images/logo_mecao.svg'); ?>" alt="" />
 							</a>
 							<button type="button" class="-m-2.5 rounded-md p-2.5 bg-white/20 text-white" @click="open = false">
-								<span class="sr-only">Fechar menu</span>
+								<!-- <span class="sr-only">Fechar menu</span> -->
 								<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 									<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 								</svg>

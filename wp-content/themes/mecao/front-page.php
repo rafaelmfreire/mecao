@@ -3,8 +3,8 @@ get_header();
 ?>
 
 <main>
-	<div class="bg-white container mx-auto rounded-xl sm:rounded-[24px] p-4 sm:p-8 my-6 grid grid-cols-12 gap-4 sm:gap-8">
-		<div class="col-span-12 space-y-4 sm:space-y-0 sm:col-span-8">
+	<div class="bg-white container mx-auto rounded-xl lg:rounded-[24px] p-4 lg:p-8 my-6 grid grid-cols-12 gap-4 lg:gap-8">
+		<div class="col-span-12 space-y-4 lg:space-y-0 lg:col-span-8">
 			<!-- FEATURED -->
 			<?php
 
@@ -23,14 +23,14 @@ get_header();
 							<div class="rounded-md relative  overflow-hidden shadow">
 								<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 via-30% to-50%"></div>
 								<?php the_post_thumbnail('featuredPhoto', ['class' => 'w-full object-cover']); ?>
-								<header class="p-4 sm:p-6 absolute bottom-0">
-									<h2 class="group-hover:underline text-pretty text-base leading-6 sm:text-[2.5rem] sm:leading-[2.875rem] font-medium sm:font-bold text-white [text-shadow:_2px_2px_2px_rgb(0_0_0_/_50%)]"><?php the_title(); ?></h2>
+								<header class="p-4 lg:p-6 absolute bottom-0">
+									<h2 class="group-hover:underline text-pretty text-base leading-6 lg:text-[2.5rem] lg:leading-[2.875rem] font-medium lg:font-bold text-white [text-shadow:_2px_2px_2px_rgb(0_0_0_/_50%)]"><?php the_title(); ?></h2>
 								</header>
 							</div>
 						</article>
 					</a>
 
-					<div class="hidden sm:flex items-center justify-center space-x-8 pb-10">
+					<div class="hidden lg:flex items-center justify-center space-x-8 pb-10">
 						<span class="text-sm font-bold text-gray-dark/85">Parceiro Master</span>
 						<div class="flex justify-center"><a href="mailto:contato@mecao.com.br" class="inline-block text-sm text-red font-medium px-5 py-3 rounded-md bg-transparent hover:bg-red hover:text-white border border-red/40 shadow-small hover:shadow-red/20 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a></div>
 					</div>
@@ -54,18 +54,18 @@ get_header();
 					$lastNews->the_post(); ?>
 					<article class="relative group bg-white border border-gray-dark/20 rounded-lg shadow-small overflow-hidden">
 						<div class=" hidden group-first-of-type:flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
-							<h2 class="font-black sm:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Últimas Notícias</h2>
+							<h2 class="font-black lg:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Últimas Notícias</h2>
 						</div>
 						<div class="grid grid-cols-12">
 							<?php if (get_the_post_thumbnail()) { ?>
-								<div class="col-span-12 sm:col-span-5">
+								<div class="col-span-12 lg:col-span-5">
 									<?php
-									the_post_thumbnail('homeNewsPhoto', ['class' => 'h-full max-h-[150px] sm:max-h-full sm:min-h-[265px] object-cover']);
+									the_post_thumbnail('homeNewsPhoto', ['class' => 'h-full max-h-[150px] lg:max-h-full lg:min-h-[265px] object-cover']);
 									?>
 								</div>
-								<div class="p-4 sm:p-8 col-span-12 sm:col-span-7">
+								<div class="p-4 lg:p-8 col-span-12 lg:col-span-7">
 								<?php } else { ?>
-									<div class="p-4 sm:p-8 col-span-12">
+									<div class="p-4 lg:p-8 col-span-12">
 									<?php } ?>
 									<div class="flex items-center text-blue mb-5">
 										<time class="text-sm font-medium relative pl-5 before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 before:w-3 before:h-3 before:rounded-full before:bg-red">
@@ -81,11 +81,11 @@ get_header();
 									</div>
 									<a href="<?php the_permalink(); ?>">
 										<span class="absolute inset-0"></span>
-										<h3 class="font-bold text-pretty text-sm sm:text-xl sm:leading-6 mb-2 line-clamp-3">
+										<h3 class="font-bold text-pretty text-sm lg:text-xl lg:leading-6 mb-2 line-clamp-3">
 											<?php echo get_the_title(); ?>
 										</h3>
 									</a>
-									<p class="hidden sm:block line-clamp-3">
+									<p class="hidden lg:block line-clamp-3">
 										<?php echo get_the_excerpt(); ?>
 									</p>
 									</div>
@@ -104,7 +104,7 @@ get_header();
 			</div>
 		</div>
 
-		<section class="col-span-12 sm:col-span-4">
+		<section class="col-span-12 lg:col-span-4">
 
 			<?php get_template_part('template-parts/content', 'lastgame'); ?>
 			<?php get_template_part('template-parts/content', 'nextgame'); ?>

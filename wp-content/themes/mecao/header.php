@@ -9,8 +9,8 @@
 
 <body class="bg-red-dark font-sans">
 	<header id="topbar" class="show-bar sticky top-0 w-full bg-red-dark z-50 transition-all duration-300 ease-in-out">
-		<div class="container mx-auto px-4 sm:px-8 py-2 sm:py-0">
-			<div class="flex flex-col-reverse sm:flex-row gap-4 sm:gap-0 items-center justify-between pt-3 pb-5">
+		<div class="container mx-auto px-4 md:px-8 py-2 md:py-0">
+			<div class="flex flex-col-reverse md:flex-row gap-4 md:gap-0 items-center justify-between pt-3 pb-5">
 				<?php
 				$nextMatch = new WP_Query([
 					'posts_per_page' => 1,
@@ -30,12 +30,12 @@
 				if ($nextMatch->have_posts()) {
 					$nextMatch->the_post();
 				?>
-					<div class="relative flex items-center w-full sm:w-auto justify-between space-x-1 blue-gradient text-white py-2 px-4 rounded-lg ring-2 ring-white/10 shadow hover:border-white/70 hover:cursor-pointer hover:shadow-small hover:shadow-white/20 hover:bg-gradient-to-l">
+					<div class="relative flex items-center w-full md:w-auto justify-between space-x-1 blue-gradient text-white py-2 px-4 rounded-lg ring-2 ring-white/10 shadow hover:border-white/70 hover:cursor-pointer hover:shadow-small hover:shadow-white/20 hover:bg-gradient-to-l">
 						<a href="<?php the_permalink(); ?>">
 							<span class="absolute inset-0"></span>
-							<span class="yellow-gradient font-black italic uppercase text-xs sm:text-sm inline-block text-transparent bg-clip-text">Próximo Jogo</span>
+							<span class="yellow-gradient font-black italic uppercase text-xs md:text-sm inline-block text-transparent bg-clip-text">Próximo Jogo</span>
 						</a>
-						<svg class="hidden sm:inline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="hidden md:inline" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="9" cy="17" r="1" fill="#FACC15" />
 							<circle cx="7" cy="20" r="1" fill="#FACC15" />
 							<circle cx="11" cy="14" r="1" fill="#FACC15" />
@@ -53,7 +53,7 @@
 							IntlDateFormatter::GREGORIAN,
 						);
 						?>
-						<span class="text-xs sm:text-sm font-medium capitalize">
+						<span class="text-xs md:text-sm font-medium capitalize">
 							<?php
 							$formatter->setPattern('E dd LLL');
 							echo $formatter->format($matchTime);
@@ -64,7 +64,7 @@
 							<span>x</span>
 							<img class="h-7 w-auto" src="<?php echo get_field('away_team')['url'] ?>" alt="">
 						</div>
-						<svg class="hidden sm:inline ml-12" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg class="hidden md:inline ml-12" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="8" cy="20" r="1" fill="#FACC15" />
 							<circle cx="1" cy="1" r="1" transform="matrix(1 0 0 -1 7 5)" fill="#FACC15" />
 							<circle cx="10" cy="18" r="1" fill="#FACC15" />
@@ -81,7 +81,7 @@
 					?>
 					</div>
 					<!-- <div class="flex items-center space-x-4">
-						<input type="search" id="mySearch" name="q" class="block w-[400px] rounded-lg border-0 py-3 bg-white/10 shadow text-white ring-1 ring-inset ring-white/35 placeholder:text-white/50 focus:ring-2 focus:ring-inset focus:ring-white/60 sm:text-sm" placeholder="Pesquisar...">
+						<input type="search" id="mySearch" name="q" class="block w-[400px] rounded-lg border-0 py-3 bg-white/10 shadow text-white ring-1 ring-inset ring-white/35 placeholder:text-white/50 focus:ring-2 focus:ring-inset focus:ring-white/60 md:text-sm" placeholder="Pesquisar...">
 						<button class="p-3">
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M20.9998 21L15.8028 15.803M15.8028 15.803C17.2094 14.3964 17.9996 12.4887 17.9996 10.4995C17.9996 8.51029 17.2094 6.60256 15.8028 5.19599C14.3962 3.78941 12.4885 2.99921 10.4993 2.99921C8.51011 2.99921 6.60238 3.78941 5.19581 5.19599C3.78923 6.60256 2.99902 8.51029 2.99902 10.4995C2.99902 12.4887 3.78923 14.3964 5.19581 15.803C6.60238 17.2096 8.51011 17.9998 10.4993 17.9998C12.4885 17.9998 14.3962 17.2096 15.8028 15.803Z" stroke="white" stroke-opacity="0.35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -89,9 +89,9 @@
 						</button>
 					</div> -->
 
-					<div class="w-full sm:w-auto flex justify-between sm:justify-center items-center sm:space-x-4">
-						<span class="block sm:inline font-bold text-xs sm:text-sm text-white/85">Parceiro Master</span>
-						<a href="mailto:contato@mecao.com.br" class="block sm:inline-block text-xs sm:text-sm text-white font-medium px-5 py-3 rounded-md bg-transparent hover:bg-white hover:text-red border border-white/40 shadow-small hover:shadow-white/10 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a>
+					<div class="w-full md:w-auto flex justify-between md:justify-center items-center md:space-x-4">
+						<span class="block md:inline font-bold text-xs md:text-sm text-white/85">Parceiro Master</span>
+						<a href="mailto:contato@mecao.com.br" class="block md:inline-block text-xs md:text-sm text-white font-medium px-5 py-3 rounded-md bg-transparent hover:bg-white hover:text-red border border-white/40 shadow-small hover:shadow-white/10 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a>
 					</div>
 			</div>
 		</div>
@@ -104,7 +104,7 @@
 						<h1 class="pl-16 font-display text-yellow text-4xl">Portal Mecão</h1>
 					</div>
 				</a>
-				<div class="hidden sm:flex items-center space-x-20">
+				<div class="hidden md:flex items-center space-x-20">
 					<nav>
 						<ul class="flex items-center space-x-8 text-white font-bold">
 							<a href="<?php echo site_url('/noticias'); ?>">

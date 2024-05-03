@@ -5,6 +5,7 @@ function mecao_files()
 	wp_enqueue_style('tailwindcss_build', get_theme_file_uri('/build/style.css'), [], '0.1.0');
 	wp_enqueue_style('mecao_custom_fonts', get_theme_file_uri('/css/font-face.css'));
 	wp_enqueue_script('mecaoScripts', get_theme_file_uri('/js/main.js'));
+	wp_enqueue_script('alpinejs', '//unpkg.com/alpinejs');
 }
 
 add_action('wp_enqueue_scripts', 'mecao_files');

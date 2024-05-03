@@ -1,6 +1,8 @@
 <div class="bg-white border border-gray-dark/20 rounded-lg shadow-small mt-10 overflow-hidden">
     <div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
-        <h2 class="font-black sm:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Série D</h2>
+        <a href="<?php echo site_url('/campeonatos/brasileirao-serie-d'); ?>">
+            <h2 class="font-black sm:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Série D</h2>
+        </a>
     </div>
     <div class="px-4 py-4 w-full">
         <table class="min-w-full text-sm sm:text-base text-stone-900">

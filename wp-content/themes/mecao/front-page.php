@@ -52,11 +52,13 @@ get_header();
 
 				while ($lastNews->have_posts()) {
 					$lastNews->the_post(); ?>
-					<article class="relative group bg-white border border-gray-dark/20 rounded-lg shadow-small overflow-hidden">
-						<div class=" hidden group-first-of-type:flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
-							<h2 class="font-black md:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Últimas Notícias</h2>
+					<article class="group bg-white border border-gray-dark/20 rounded-lg shadow-small overflow-hidden">
+						<div class="hidden group-first-of-type:flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
+							<a href="<?php echo site_url('/noticias'); ?>">
+								<h2 class="font-black md:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Últimas Notícias</h2>
+							</a>
 						</div>
-						<div class="grid grid-cols-12">
+						<div class="relative grid grid-cols-12">
 							<?php if (get_the_post_thumbnail()) { ?>
 								<div class="col-span-12 md:col-span-5">
 									<?php

@@ -31,3 +31,9 @@ function mecao_remove_default_images($sizes)
 	return $sizes;
 }
 add_filter('intermediate_image_sizes_advanced', 'mecao_remove_default_images');
+
+function mecao_change_archive_title($title, $display = true)
+{
+	return get_post_type_object(get_query_var('post_type'))->label;
+}
+add_filter('post_type_archive_title', 'mecao_change_archive_title');

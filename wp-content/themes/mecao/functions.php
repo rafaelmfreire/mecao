@@ -33,8 +33,10 @@ function mecao_remove_default_images($sizes)
 }
 add_filter('intermediate_image_sizes_advanced', 'mecao_remove_default_images');
 
-function mecao_change_archive_title($title, $display = true)
+function mecao_change_archive_title($title)
 {
-	return get_post_type_object(get_query_var('post_type'))->label;
+	if (is_post_type_archive('match')) {
+		return get_post_type_object(get_query_var('post_type'))->label . ' - ' . get_bloginfo('name');
+	}
 }
-add_filter('post_type_archive_title', 'mecao_change_archive_title');
+add_filter('pre_get_document_title', 'mecao_change_archive_title');

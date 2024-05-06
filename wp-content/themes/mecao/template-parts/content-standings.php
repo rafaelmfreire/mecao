@@ -55,7 +55,7 @@
                 <td class="px-4 py-3 font-bold text-center">4</td>
             </tr>
             <tr class="border-b-2 border-dotted border-gray-light/10">
-                <td class="px-4 py-3 font-bold">3</td>
+                <td class="px-4 py-3 font-bold">4</td>
                 <td class="px-4 py-3 font-bold">Maracanã-CE</td>
                 <td class="px-4 py-3 text-center">2</td>
                 <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">1</td>
@@ -79,7 +79,7 @@
                 <td class="px-4 py-3 font-bold text-center">3</td>
             </tr>
             <tr class="border-b-2 border-dotted border-gray-light/10">
-                <td class="px-4 py-3 font-bold">5</td>
+                <td class="px-4 py-3 font-bold">6</td>
                 <td class="px-4 py-3 font-bold">Sousa</td>
                 <td class="px-4 py-3 text-center">2</td>
                 <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">0</td>

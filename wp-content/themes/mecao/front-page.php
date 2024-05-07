@@ -46,7 +46,7 @@ get_header();
 				<?php
 				$lastNews = new WP_Query([
 					'posts_per_page' => 4,
-					'category_name' => 'noticias',
+					// 'category_name' => 'noticias',
 					'post__not_in' => get_option('sticky_posts')
 				]);
 

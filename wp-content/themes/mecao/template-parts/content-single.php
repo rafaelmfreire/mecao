@@ -22,7 +22,7 @@
         <figcaption class=" text-stone-500 p-1"><?php echo the_post_thumbnail_caption(get_the_ID()); ?></figcaption>
     </figure>
     <div class="py-8 sm:px-8 prose sm:prose-xl prose-red text-pretty selection:bg-red-dark selection:text-white
-					prose-img:rounded-md prose-video:max-w-12">
+					prose-img:rounded-md prose-a:no-underline prose-a:hover:underline">
         <?php the_content(); ?>
     </div>
 </article>

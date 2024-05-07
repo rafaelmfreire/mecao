@@ -15,6 +15,7 @@ get_header();
 				prose-h4:uppercase prose-h4:text-stone-800 prose-h4:font-bold prose-h4:tracking-wide prose-h4:text-pretty
 				prose-h4:text-lg prose-h4:leading-normal md:prose-h4:text-3xl md:prose-h4:leading-[1.25em]
 				prose-img:rounded-md
+				prose-a:no-underline prose-a:hover:underline
 				prose-p:leading-[1.6em]">
 					<?php
 					$matchTime = new DateTime(get_field('match_time'));

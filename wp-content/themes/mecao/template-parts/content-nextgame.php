@@ -99,7 +99,12 @@ if ($nextMatch->have_posts()) {
                                 <?php echo $awayTeam['title']; ?>
                             </span>
                         </p>
-                        <p class="hidden lg:block text-center leading-none text-[0.6875rem] text-gray-dark"><?php echo get_field('match_stadium'); ?></p>
+                        <p class="hidden lg:block text-center leading-none text-[0.6875rem] text-gray-dark mb-3"><?php echo get_field('match_stadium'); ?></p>
+                        <div class="flex justify-center">
+                            <span class=" text-xs text-blue-dark font-medium px-3 py-1 rounded bg-transparent group-hover:bg-blue-dark group-hover:text-white border border-blue-dark/40 shadow-small group-hover:shadow-blue-dark/20 transition-all duration-300 ease-in-out">
+                                Veja o pré-jogo
+                            </span>
+                        </div>
                     </div>
                     <div class="justify-self-end self-end">
                         <img class="h-full max-h-[72px] object-cover" src="<?php echo esc_url($awayTeam['url']) ?>" alt="">

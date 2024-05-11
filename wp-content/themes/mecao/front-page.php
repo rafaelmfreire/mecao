@@ -29,12 +29,6 @@ get_header();
 							</div>
 						</article>
 					</a>
-
-					<div class="hidden md:flex items-center justify-center space-x-8 pb-8">
-						<span class="text-sm font-bold text-gray-dark/85">Parceiro Master</span>
-						<div class="flex justify-center"><a href="mailto:contato@mecao.com.br" class="inline-block text-sm text-red font-medium px-5 py-3 rounded-md bg-transparent hover:bg-red hover:text-white border border-red/40 shadow-small hover:shadow-red/20 transition-all duration-300 ease-in-out">Seja parceiro do Portal Mecão</a></div>
-					</div>
-
 			<?php
 				}
 				wp_reset_postdata();

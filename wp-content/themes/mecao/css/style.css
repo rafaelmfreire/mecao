@@ -97,6 +97,7 @@
     overflow: hidden;
     padding-top: 56.25%;
     position: relative;
+    border-radius: 8px;
 }
 
 .iframe-container iframe {

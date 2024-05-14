@@ -10,12 +10,12 @@
 		<div class="hidden lg:block space-y-6">
 			<h2 class="font-black uppercase">Categorias</h2>
 			<ul class="space-y-4">
-				<li><a href="<?php echo site_url('/noticias') ?>">Notícias</a></li>
+				<li><a href="<?php echo site_url('/noticias/') ?>">Notícias</a></li>
 				<?php
 				$categoryNoticia = get_category_by_slug('noticia');
 				foreach (get_categories(['exclude' => [$categoryNoticia->cat_ID]]) as $category) {
 				?>
-					<li><a href="<?php echo site_url('/category/' . $category->slug) ?>"><?php echo $category->name; ?></a></li>
+					<li><a href="<?php echo site_url('/category/' . $category->slug . '/') ?>"><?php echo $category->name; ?></a></li>
 				<?php } ?>
 				<!-- <li>Mais Vistas</li> -->
 			</ul>

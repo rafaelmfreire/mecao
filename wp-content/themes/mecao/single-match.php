@@ -11,9 +11,9 @@ get_header();
 			?>
 				<article class="prose sm:prose-xl prose-red w-full
 				prose-h2:uppercase prose-h2:text-red prose-h2:font-bold prose-h2:text-2xl
-				prose-h3:uppercase prose-h3:text-red-dark prose-h3:text-sm prose-h3:tracking-widest prose-h3:font-medium prose-h3:pt-[2em] prose-h3:mb-[1.25em]
-				prose-h4:uppercase prose-h4:text-stone-800 prose-h4:font-bold prose-h4:tracking-wide prose-h4:text-pretty
-				prose-h4:text-lg prose-h4:leading-normal md:prose-h4:text-3xl md:prose-h4:leading-[1.25em]
+				prose-h4:uppercase prose-h4:text-red-dark prose-h4:text-sm prose-h4:tracking-widest prose-h4:font-medium prose-h4:pt-[2em] prose-h4:mb-[1.25em]
+				prose-h3:uppercase prose-h3:text-stone-800 prose-h3:font-bold prose-h3:tracking-wide prose-h3:text-pretty
+				prose-h3:text-lg prose-h3:leading-normal md:prose-h3:text-3xl md:prose-h3:leading-[1.25em]
 				prose-img:rounded-md
 				prose-a:no-underline hover:prose-a:underline
 				prose-p:leading-[1.6em]">

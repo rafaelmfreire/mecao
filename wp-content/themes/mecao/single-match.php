@@ -13,7 +13,7 @@ get_header();
 				prose-h2:uppercase prose-h2:text-red prose-h2:font-bold prose-h2:text-2xl
 				prose-h3:uppercase prose-h3:text-stone-800 prose-h3:font-bold prose-h3:tracking-wide prose-h3:text-pretty
 				prose-h3:text-lg prose-h3:leading-normal md:prose-h3:text-3xl md:prose-h3:leading-[1.25em]
-				prose-h4:uppercase prose-h4:text-red-dark prose-h4:text-sm prose-h4:tracking-widest prose-h4:font-medium
+				prose-h4:uppercase prose-h4:text-red-dark prose-h4:text-sm prose-h4:tracking-widest prose-h4:font-medium prose-h4:pt-[1.25em] 
 				prose-img:rounded-md
 				prose-a:no-underline hover:prose-a:underline
 				prose-p:leading-[1.6em]">

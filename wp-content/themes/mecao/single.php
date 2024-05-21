@@ -7,7 +7,7 @@ get_header();
 		<div class="col-span-12 space-y-4 lg:space-y-0 xl:col-span-8">
 			<?php while (have_posts()) {
 				the_post();
-				if (in_category(['video', 'fotos'])) {
+				if (in_category(['video', 'fotos', 'entrevista'])) {
 					get_template_part('template-parts/content', 'midia');
 				} else {
 					get_template_part('template-parts/content', 'single');

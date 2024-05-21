@@ -18,7 +18,7 @@
         <div class="text-stone-500 hidden md:block ">Atualizado há <?php echo human_time_diff(get_the_modified_time('U'), (new DateTime())->sub(DateInterval::createFromDateString('3 hours'))->format('U')); ?></div>
     </div>
     <div class="py-8 sm:px-8 prose sm:prose-xl prose-red text-pretty selection:bg-red-dark selection:text-white
-					prose-img:rounded-md ">
+					prose-img:rounded-md prose-a:no-underline hover:prose-a:underline">
         <?php the_content(); ?>
     </div>
 </article>

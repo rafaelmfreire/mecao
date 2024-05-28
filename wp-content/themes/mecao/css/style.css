@@ -110,7 +110,7 @@
 }
 
 .match-date {
-    @apply uppercase text-red-dark text-sm tracking-widest font-medium pt-[1.25em] !my-0;
+    @apply inline-block uppercase border border-red-dark/20 text-red-dark bg-red/5 px-3 py-1 rounded text-xs tracking-widest font-bold !mt-0 mb-2;
 }
 
 .match-date+* {

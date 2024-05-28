@@ -110,9 +110,9 @@
 }
 
 .match-date {
-    @apply uppercase text-red-dark text-sm tracking-widest font-medium pt-[1.25em];
+    @apply uppercase text-red-dark text-sm tracking-widest font-medium pt-[1.25em] !my-0;
 }
 
-:where(.match-date + *) {
-    @apply mt-0;
+.match-date+* {
+    margin-top: 0 !important;
 }

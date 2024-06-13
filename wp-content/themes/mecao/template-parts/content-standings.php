@@ -50,9 +50,9 @@
                 <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">0</td>
                 <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">4</td>
                 <td class="px-4 py-3 text-center">12</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">12</td>
                 <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">13</td>
-                <td class="px-4 py-3 font-bold text-center">-1</td>
+                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">-1</td>
+                <td class="px-4 py-3 font-bold text-center">12</td>
             </tr>
             <tr class="border-b-2 border-dotted border-gray-light/10">
                 <td class="px-4 py-3 font-bold">4</td>
@@ -64,7 +64,7 @@
                 <td class="px-4 py-3 text-center">9</td>
                 <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">11</td>
                 <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">-2</td>
-                <td class="px-4 py-3 font-bold text-center">-2</td>
+                <td class="px-4 py-3 font-bold text-center">12</td>
             </tr>
             <tr class="border-b-2 border-dotted border-gray-light/10">
                 <td class="px-4 py-3 font-bold">5</td>

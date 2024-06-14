@@ -4,6 +4,19 @@
             <h2 class="font-black sm:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Série D</h2>
         </a>
     </div>
+    <?php
+    $classificacao = json_decode('{"times": ' .
+        '[' .
+        '{"nome":"Treze",       "j":8, "v": 7, "e": 1, "d": 0, "gp": 21, "gc": 4},' .
+        '{"nome":"Iguatu",      "j":8, "v": 4, "e": 2, "d": 2, "gp": 8,  "gc": 6},' .
+        '{"nome":"Santa Cruz",  "j":8, "v": 4, "e": 0, "d": 4, "gp": 12, "gc": 13},' .
+        '{"nome":"Atlético-CE", "j":8, "v": 4, "e": 0, "d": 4, "gp": 9,  "gc": 11},' .
+        '{"nome":"América",     "j":8, "v": 3, "e": 3, "d": 2, "gp": 10, "gc": 6},' .
+        '{"nome":"Sousa",       "j":8, "v": 3, "e": 2, "d": 3, "gp": 7,  "gc": 9},' .
+        '{"nome":"Maracanã-CE", "j":8, "v": 1, "e": 2, "d": 5, "gp": 7,  "gc": 14},' .
+        '{"nome":"Potiguar",    "j":8, "v": 1, "e": 0, "d": 7, "gp": 4,  "gc": 15}' .
+        ']}');
+    ?>
     <div class="px-4 py-4 w-full">
         <table class="min-w-full text-sm sm:text-base text-stone-900">
             <tr>
@@ -18,102 +31,20 @@
                 <th class="p-4 text-center font-normal text-stone-400 hidden md:table-cell xl:hidden">SG</th>
                 <th class="p-4 text-center font-black text-stone-400">P</th>
             </tr>
-            <tr class="border-b-2 border-dotted border-gray-light/10">
-                <td class="px-4 py-3 font-bold">1</td>
-                <td class="px-4 py-3 font-bold">Treze</td>
-                <td class="px-4 py-3 text-center">8</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">7</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">1</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">0</td>
-                <td class="px-4 py-3 text-center">21</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">4</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">17</td>
-                <td class="px-4 py-3 font-black text-center">22</td>
-            </tr>
-            <tr class="border-b-2 border-dotted border-gray-light/10">
-                <td class="px-4 py-3 font-bold">2</td>
-                <td class="px-4 py-3 font-bold">Iguatu</td>
-                <td class="px-4 py-3 text-center">8</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">4</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">2</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">2</td>
-                <td class="px-4 py-3 text-center">8</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">6</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">2</td>
-                <td class="px-4 py-3 font-black text-center">14</td>
-            </tr>
-            <tr class="border-b-2 border-dotted border-gray-light/10">
-                <td class="px-4 py-3 font-bold">3</td>
-                <td class="px-4 py-3 font-bold">Santa Cruz</td>
-                <td class="px-4 py-3 text-center">8</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">4</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">0</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">4</td>
-                <td class="px-4 py-3 text-center">12</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">13</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">-1</td>
-                <td class="px-4 py-3 font-bold text-center">12</td>
-            </tr>
-            <tr class="border-b-2 border-dotted border-gray-light/10">
-                <td class="px-4 py-3 font-bold">4</td>
-                <td class="px-4 py-3 font-bold">Atlético-CE</td>
-                <td class="px-4 py-3 text-center">8</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">4</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">0</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">4</td>
-                <td class="px-4 py-3 text-center">9</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">11</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">-2</td>
-                <td class="px-4 py-3 font-bold text-center">12</td>
-            </tr>
-            <tr class="border-b-2 border-dotted border-gray-light/10">
-                <td class="px-4 py-3 font-bold">5</td>
-                <td class="px-4 py-3 font-bold text-red">América</td>
-                <td class="px-4 py-3 text-center">8</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">3</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">3</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">2</td>
-                <td class="px-4 py-3 text-center">10</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">6</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">4</td>
-                <td class="px-4 py-3 font-bold text-center">12</td>
-            </tr>
-            <tr class="border-b-2 border-dotted border-gray-light/10">
-                <td class="px-4 py-3 font-bold">6</td>
-                <td class="px-4 py-3 font-bold">Sousa</td>
-                <td class="px-4 py-3 text-center">8</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">3</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">2</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">3</td>
-                <td class="px-4 py-3 text-center">7</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">9</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">-2</td>
-                <td class="px-4 py-3 font-bold text-center">11</td>
-            </tr>
-            <tr class="border-b-2 border-dotted border-gray-light/10">
-                <td class="px-4 py-3 font-bold">7</td>
-                <td class="px-4 py-3 font-bold">Maracanã-CE</td>
-                <td class="px-4 py-3 text-center">8</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">1</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">2</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">5</td>
-                <td class="px-4 py-3 text-center">7</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">14</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">-7</td>
-                <td class="px-4 py-3 font-bold text-center">5</td>
-            </tr>
-            <tr>
-                <td class="px-4 py-3 font-bold">8</td>
-                <td class="px-4 py-3 font-bold">Potiguar</td>
-                <td class="px-4 py-3 text-center">8</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">1</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">0</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">7</td>
-                <td class="px-4 py-3 text-center">4</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">15</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">-11</td>
-                <td class="px-4 py-3 font-bold text-center">3</td>
-            </tr>
+            <?php foreach ($classificacao->times as $key => $time) { ?>
+                <tr class="border-b-2 border-dotted border-gray-light/10">
+                    <td class="px-4 py-3 font-bold"><?= ++$key; ?></td>
+                    <td class="px-4 py-3 font-bold <?php echo $time->nome == 'América' ? 'text-red' : '' ?>"><?= $time->nome ?></td>
+                    <td class="px-4 py-3 text-center"><?= $time->j ?></td>
+                    <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden"><?= $time->v ?></td>
+                    <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden"><?= $time->e ?></td>
+                    <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden"><?= $time->d ?></td>
+                    <td class="px-4 py-3 text-center"><?= $time->gp ?></td>
+                    <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden"><?= $time->gc ?></td>
+                    <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden"><?= $time->gp - $time->gc ?></td>
+                    <td class="px-4 py-3 font-black text-center"><?= ($time->v * 3) + ($time->e) ?></td>
+                </tr>
+            <?php }; ?>
         </table>
     </div>
 </div>

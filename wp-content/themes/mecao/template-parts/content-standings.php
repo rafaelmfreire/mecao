@@ -21,14 +21,14 @@
             <tr class="border-b-2 border-dotted border-gray-light/10">
                 <td class="px-4 py-3 font-bold">1</td>
                 <td class="px-4 py-3 font-bold">Treze</td>
-                <td class="px-4 py-3 text-center">7</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">6</td>
+                <td class="px-4 py-3 text-center">8</td>
+                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">7</td>
                 <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">1</td>
                 <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">0</td>
-                <td class="px-4 py-3 text-center">19</td>
+                <td class="px-4 py-3 text-center">21</td>
                 <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">4</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">15</td>
-                <td class="px-4 py-3 font-black text-center">19</td>
+                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">17</td>
+                <td class="px-4 py-3 font-black text-center">22</td>
             </tr>
             <tr class="border-b-2 border-dotted border-gray-light/10">
                 <td class="px-4 py-3 font-bold">2</td>
@@ -105,13 +105,13 @@
             <tr>
                 <td class="px-4 py-3 font-bold">8</td>
                 <td class="px-4 py-3 font-bold">Potiguar</td>
-                <td class="px-4 py-3 text-center">7</td>
+                <td class="px-4 py-3 text-center">8</td>
                 <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">1</td>
                 <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">0</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">6</td>
+                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">7</td>
                 <td class="px-4 py-3 text-center">4</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">13</td>
-                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">-9</td>
+                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">15</td>
+                <td class="px-4 py-3 text-center hidden md:table-cell xl:hidden">-11</td>
                 <td class="px-4 py-3 font-bold text-center">3</td>
             </tr>
         </table>

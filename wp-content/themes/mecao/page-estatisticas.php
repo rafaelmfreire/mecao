@@ -309,7 +309,6 @@ $vermelhos = $rankingVermelhos->vermelho;
 
     </div>
 </main>
-<!--  -->
-pphp
-get_footer()
-// ?>
+<?php
+get_footer();
+?>

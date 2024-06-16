@@ -117,14 +117,9 @@
 							<a href="<?php echo site_url('/jogos'); ?>">
 								<li class="hover:opacity-100 transition-all duration-300 ease-in-out <?php echo (get_post_type() == 'match' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Jogos</li>
 							</a>
-							<!-- <a href="<?php //echo site_url('/jogadores'); 
-											?>">
-								<li class="opacity-80">Jogadores</li>
+							<a href="<?php echo site_url('/estatisticas'); ?>">
+								<li class="hover:opacity-100 transition-all duration-300 ease-in-out <?php echo (get_page_uri() == 'estatisticas' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Estatísticas</li>
 							</a>
-							<a href="<?php //echo site_url('/envie-sua-noticia'); 
-										?>">
-								<li class="opacity-80">Mande sua notícia</li>
-							</a> -->
 						</ul>
 					</nav>
 					<ul class="flex items-center space-x-8">

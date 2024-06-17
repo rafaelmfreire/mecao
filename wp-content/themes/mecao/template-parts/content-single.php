@@ -23,7 +23,7 @@
     </figure>
     <div class="py-8 sm:px-8 prose sm:prose-xl prose-red text-pretty selection:bg-red-dark selection:text-white
 				prose-h4:uppercase prose-h4:text-red-dark prose-h4:text-sm prose-h4:tracking-widest prose-h4:font-medium prose-h4:pt-[1.25em] 
-				prose-p:font-medium prose-p:text-stone-900 prose-img:rounded-md prose-a:no-underline prose-h2:text-2xl prose-h3:text-xl hover:prose-a:underline">
+				prose-p:text-stone-900 prose-img:rounded-md prose-a:no-underline prose-h2:text-2xl prose-h3:text-xl hover:prose-a:underline">
         <?php the_content(); ?>
     </div>
 </article>

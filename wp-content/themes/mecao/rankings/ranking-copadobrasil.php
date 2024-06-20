@@ -67,7 +67,7 @@ $amarelos = $rankingAmarelos->amarelo;
 ?>
 
 <div x-show="show == 3" x-transition class="col-span-12 grid grid-cols-12 gap-4 lg:gap-8">
-    <div class="col-span-12 space-y-4 lg:space-y-0 xl:col-span-4">
+    <div class="col-span-12 space-y-4 lg:space-y-0 md:col-span-6 xl:col-span-4">
         <div class="bg-white border border-gray-dark/20 rounded-lg shadow-small overflow-hidden">
             <div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
                 <h2 class="font-black sm:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Jogos</h2>
@@ -100,7 +100,7 @@ $amarelos = $rankingAmarelos->amarelo;
             </div>
         </div>
     </div>
-    <div class="col-span-12 space-y-4 lg:space-y-0 xl:col-span-4">
+    <div class="col-span-12 space-y-4 lg:space-y-0 md:col-span-6 xl:col-span-4">
         <div class="bg-white border border-gray-dark/20 rounded-lg shadow-small overflow-hidden">
             <div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
                 <h2 class="font-black sm:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Gols</h2>
@@ -136,7 +136,7 @@ $amarelos = $rankingAmarelos->amarelo;
             </div>
         </div>
     </div>
-    <div class="col-span-12 space-y-4 lg:space-y-0 xl:col-span-4">
+    <div class="col-span-12 space-y-4 lg:space-y-0 md:col-span-6 xl:col-span-4">
         <div class="bg-white border border-gray-dark/20 rounded-lg shadow-small overflow-hidden">
             <div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
                 <h2 class="font-black sm:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Assistências</h2>
@@ -172,7 +172,7 @@ $amarelos = $rankingAmarelos->amarelo;
             </div>
         </div>
     </div>
-    <div class="col-span-12 space-y-4 lg:space-y-0 xl:col-span-4">
+    <div class="col-span-12 space-y-4 lg:space-y-0 md:col-span-6 xl:col-span-4">
         <div class="bg-white border border-gray-dark/20 rounded-lg shadow-small overflow-hidden">
             <div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
                 <h2 class="font-black sm:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Minutos Jogados</h2>
@@ -208,7 +208,7 @@ $amarelos = $rankingAmarelos->amarelo;
             </div>
         </div>
     </div>
-    <div class="col-span-12 space-y-4 lg:space-y-0 xl:col-span-4">
+    <div class="col-span-12 space-y-4 lg:space-y-0 md:col-span-6 xl:col-span-4">
         <div class="bg-white border border-gray-dark/20 rounded-lg shadow-small overflow-hidden">
             <div class="flex items-center justify-between bg-gradient-to-r blue-gradient rounded-t-md px-4 py-2">
                 <h2 class="font-black sm:text-2xl yellow-gradient text-transparent italic uppercase inline-block bg-clip-text">Cartões Amarelos</h2>

@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.{php,html,js}","./template-parts/*.{php,html,js}"],
+  content: ["./*.{php,html,js}", "./template-parts/*.{php,html,js}", "./rankings/*.{php,html,js}"],
   theme: {
     screens: {
       sm: '480px',

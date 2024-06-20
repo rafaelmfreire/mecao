@@ -161,6 +161,7 @@
 									<a href="<?php echo site_url('/noticias'); ?>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/20 <?php echo (get_post_type() == 'post' ? 'bg-yellow/20' : ''); ?>">Notícias</a>
 									<a href="<?php echo site_url('/campeonatos'); ?>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/20 <?php echo (get_post_type() == 'competition' ? 'bg-yellow/20' : ''); ?>">Campeonatos</a>
 									<a href="<?php echo site_url('/jogos'); ?>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/20 <?php echo (get_post_type() == 'match' ? 'bg-yellow/20' : ''); ?>">Jogos</a>
+									<a href="<?php echo site_url('/estatisticas'); ?>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/20 <?php echo (get_page_uri() == 'estatisticas' ? 'bg-yellow/20' : ''); ?>">Estatísticas</a>
 								</div>
 								<div class="py-6 flex items-center space-x-6">
 									<a href="https://instagram.com/portalmecao" target="_blank" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">

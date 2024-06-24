@@ -104,7 +104,7 @@
 						<h1 class="pl-16 font-display text-yellow text-4xl">Portal Mecão</h1>
 					</div>
 				</a>
-				<div class="hidden md:flex items-center md:space-x-10 lg:space-x-20">
+				<div class="hidden lg:flex items-center lg:space-x-10">
 					<nav>
 						<ul class="flex items-center space-x-8 text-white font-bold">
 							<a href="<?php echo site_url('/noticias'); ?>">
@@ -116,6 +116,9 @@
 							</a>
 							<a href="<?php echo site_url('/jogos'); ?>">
 								<li class="hover:opacity-100 transition-all duration-300 ease-in-out <?php echo (get_post_type() == 'match' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Jogos</li>
+							</a>
+							<a href="<?php echo site_url('/resultados'); ?>">
+								<li class="hover:opacity-100 transition-all duration-300 ease-in-out <?php echo (get_page_uri() == 'resultados' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Resultados</li>
 							</a>
 							<a href="<?php echo site_url('/estatisticas'); ?>">
 								<li class="hover:opacity-100 transition-all duration-300 ease-in-out <?php echo (get_page_uri() == 'estatisticas' ? 'relative after:border-b-2 after:w-full after:block after:absolute after:pb-1 after:h-1 after:border-dotted after:border-yellow' : 'opacity-80'); ?>">Estatísticas</li>
@@ -131,7 +134,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="flex md:hidden" @click="open = true">
+				<div class="flex lg:hidden" @click="open = true">
 					<button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
 						<!-- <span class="sr-only">Open main menu</span> -->
 						<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -161,6 +164,7 @@
 									<a href="<?php echo site_url('/noticias'); ?>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/20 <?php echo (get_post_type() == 'post' ? 'bg-yellow/20' : ''); ?>">Notícias</a>
 									<a href="<?php echo site_url('/campeonatos'); ?>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/20 <?php echo (get_post_type() == 'competition' ? 'bg-yellow/20' : ''); ?>">Campeonatos</a>
 									<a href="<?php echo site_url('/jogos'); ?>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/20 <?php echo (get_post_type() == 'match' ? 'bg-yellow/20' : ''); ?>">Jogos</a>
+									<a href="<?php echo site_url('/resultados'); ?>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/20 <?php echo (get_page_uri() == 'resultados' ? 'bg-yellow/20' : ''); ?>">Resultados</a>
 									<a href="<?php echo site_url('/estatisticas'); ?>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-white/20 <?php echo (get_page_uri() == 'estatisticas' ? 'bg-yellow/20' : ''); ?>">Estatísticas</a>
 								</div>
 								<div class="py-6 flex items-center space-x-6">

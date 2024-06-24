@@ -27,7 +27,7 @@ if ($nextMatch->have_posts()) {
                 <span class="font-display font-semibold text-[2.5rem] text-yellow leading-none">
                     <?php echo $matchTime->format('d'); ?>
                 </span>
-                <div class="flex-col space-y-0">
+                <div class="flex flex-col space-y-0">
                     <?php
                     $formatter = new IntlDateFormatter(
                         'pt_BR',
@@ -37,14 +37,14 @@ if ($nextMatch->have_posts()) {
                         IntlDateFormatter::GREGORIAN,
                     );
                     ?>
-                    <span class="block uppercase leading-none text-white font-black  text-xs lg:text-sm">
+                    <span class="block uppercase leading-none text-white font-black text-sm">
                         <?php
                         $formatter->setPattern('cccc');
                         echo $formatter->format($matchTime);
                         ?>
 
                     </span>
-                    <span class="block uppercase leading-none text-white  text-xs lg:text-sm">
+                    <span class="block uppercase leading-none text-white text-sm">
                         <?php
                         $formatter->setPattern('MMMM');
                         echo $formatter->format($matchTime);

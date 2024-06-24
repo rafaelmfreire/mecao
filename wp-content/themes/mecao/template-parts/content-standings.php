@@ -32,7 +32,7 @@
                 <th class="p-4 text-center font-black text-stone-400">P</th>
             </tr>
             <?php foreach ($classificacao->times as $key => $time) { ?>
-                <tr class="border-b-2 border-dotted border-gray-light/10">
+                <tr class="border-b-2 border-dotted last:border-none border-gray-light/10">
                     <td class="px-4 py-3 font-bold"><?= ++$key; ?></td>
                     <td class="px-4 py-3 font-bold <?php echo $time->nome == 'América' ? 'text-red' : '' ?>"><?= $time->nome ?></td>
                     <td class="px-4 py-3 text-center"><?= $time->j ?></td>

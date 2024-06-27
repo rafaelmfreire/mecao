@@ -129,10 +129,10 @@
     @apply absolute text-6xl text-stone-400 italic;
 }
 .wp-block-quote p::before {
-    @apply -top-8 -left-10;
+    @apply -top-8 -left-6 md:-left-10;
 }
 .wp-block-quote p::after {
-    @apply -bottom-14 -right-8;
+    @apply -bottom-14 right-0 md:-right-8;
 }
 
 .wp-block-quote cite {

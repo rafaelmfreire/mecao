@@ -116,3 +116,25 @@
 .match-date+* {
     margin-top: 0 !important;
 }
+
+.wp-block-quote {
+    @apply border-none not-italic font-bold !my-[3em];
+}
+
+.wp-block-quote p {
+    @apply relative text-2xl;
+}
+
+.wp-block-quote p::before, .wp-block-quote p::after {
+    @apply absolute text-6xl text-stone-400 italic;
+}
+.wp-block-quote p::before {
+    @apply -top-8 -left-10;
+}
+.wp-block-quote p::after {
+    @apply -bottom-14 -right-8;
+}
+
+.wp-block-quote cite {
+    @apply font-medium text-base not-italic;
+}

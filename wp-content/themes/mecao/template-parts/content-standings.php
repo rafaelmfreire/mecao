@@ -7,8 +7,8 @@
     <?php
     $classificacao = json_decode('{"times": ' .
         '[' .
-        '{"nome":"Treze",       "j":10, "v": 7, "e": 3, "d": 0, "gp": 23, "gc": 6},' .
-        '{"nome":"Iguatu",      "j":10, "v": 5, "e": 3, "d": 2, "gp": 10,  "gc": 6},' .
+        '{"nome":"Treze",       "j":11, "v": 7, "e": 3, "d": 1, "gp": 23, "gc": 7},' .
+        '{"nome":"Iguatu",      "j":11, "v": 6, "e": 3, "d": 2, "gp": 11,  "gc": 6},' .
         '{"nome":"Atlético-CE", "j":10, "v": 5, "e": 1, "d": 4, "gp": 12, "gc": 12},' .
         '{"nome":"América",     "j":10, "v": 4, "e": 4, "d": 2, "gp": 12, "gc": 7},' .
         '{"nome":"Santa Cruz",  "j":10, "v": 4, "e": 1, "d": 5, "gp": 15, "gc": 17},' .

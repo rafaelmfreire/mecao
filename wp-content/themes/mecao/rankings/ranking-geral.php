@@ -2,44 +2,44 @@
 $rankingJogos = json_decode(
     '{"jogos": ' .
         '[' .
-        '{"nome":"Renan Bragança",  "j":36},' .
-        '{"nome":"Souza",        "j":34},' .
-        '{"nome":"Ferreira",       "j":33},' .
-        '{"nome":"Alan",   "j":31},' .
+        '{"nome":"Renan Bragança",  "j":37},' .
+        '{"nome":"Souza",        "j":35},' .
+        '{"nome":"Ferreira",       "j":34},' .
+        '{"nome":"Alan",   "j":32},' .
         '{"nome":"Giovani",        "j":30},' .
-        '{"nome":"Norberto",           "j":26},' .
-        '{"nome":"Marcos Ytalo",            "j":25},' .
-        '{"nome":"Gustavo Henrique",         "j":25},' .
-        '{"nome":"Wenderson",    "j":24},' .
-        '{"nome":"Rafael Jansen","j":23}' .
+        '{"nome":"Norberto",           "j":27},' .
+        '{"nome":"Marcos Ytalo",            "j":26},' .
+        '{"nome":"Gustavo Henrique",         "j":26},' .
+        '{"nome":"Rafael Jansen","j":24},' .
+        '{"nome":"Wenderson",    "j":24}' .
         ']}'
 );
 $rankingGols = json_decode(
     '{"gols": ' .
         '[' .
-        '{"nome":"Souza","j":34,"g":9},' .
-        '{"nome":"Gustavo Henrique",     "j":25,"g":7},' .
+        '{"nome":"Souza","j":35,"g":11},' .
+        '{"nome":"Gustavo Henrique",     "j":26,"g":7},' .
         '{"nome":"Rafinha",            "j":20,"g":6},' .
-        '{"nome":"Gustavo Ramos",      "j":23,"g":5},' .
+        '{"nome":"Gustavo Ramos",      "j":24,"g":5},' .
         '{"nome":"Matheuzinho",        "j":23,"g":4},' .
         '{"nome":"Wenderson",           "j":24,"g":4},' .
         '{"nome":"Giovani",         "j":30,"g":4},' .
-        '{"nome":"Alan",    "j":31,"g":4},' .
-        '{"nome":"Marcos Ytalo",       "j":25,"g":3},' .
+        '{"nome":"Alan",    "j":32,"g":4},' .
+        '{"nome":"Marcos Ytalo",       "j":26,"g":3},' .
         '{"nome":"Rodriguinho",       "j":20,"g":2}' .
         ']}'
 );
 $rankingAssistencias = json_decode(
     '{"assistencias": ' .
         '[' .
-        '{"nome":"Souza",           "j":34,"a":12},' .
+        '{"nome":"Souza",           "j":35,"a":12},' .
         '{"nome":"Giovani","j":30,"a":4},' .
         '{"nome":"Rafinha",         "j":20,"a":3},' .
         '{"nome":"Matheuzinho",     "j":23,"a":3},' .
         '{"nome":"Guilherme Guedes",   "j":18,"a":2},' .
         '{"nome":"João Lucas",        "j":19,"a":2},' .
-        '{"nome":"Antônio Villa",        "j":21,"a":2},' .
-        '{"nome":"Gustavo Ramos",        "j":23,"a":2},' .
+        '{"nome":"Antônio Villa",        "j":22,"a":2},' .
+        '{"nome":"Gustavo Ramos",        "j":24,"a":2},' .
         '{"nome":"Lucas Gabriel",        "j":2,"a":1},' .
         '{"nome":"Cauã Paixão",        "j":13,"a":1}' .
         ']}'
@@ -47,14 +47,14 @@ $rankingAssistencias = json_decode(
 $rankingMinutagem = json_decode(
     '{"minutagem": ' .
         '[' .
-        '{"nome":"Renan Bragança","j":36,"m":3558},' .
-        '{"nome":"Souza",         "j":34,"m":3141},' .
-        '{"nome":"Ferreira",     "j":33,"m":3030},' .
-        '{"nome":"Alan",           "j":31,"m":2996},' .
-        '{"nome":"Rafael Jansen",        "j":23,"m":2141},' .
-        '{"nome":"Marcos Ytalo",        "j":25,"m":2030},' .
-        '{"nome":"Norberto",        "j":26,"m":2005},' .
-        '{"nome":"Gustavo Henrique",   "j":25,"m":1919},' .
+        '{"nome":"Renan Bragança","j":37,"m":3659},' .
+        '{"nome":"Souza",         "j":35,"m":3242},' .
+        '{"nome":"Ferreira",     "j":34,"m":3131},' .
+        '{"nome":"Alan",           "j":32,"m":3097},' .
+        '{"nome":"Rafael Jansen",        "j":24,"m":2242},' .
+        '{"nome":"Marcos Ytalo",        "j":26,"m":2131},' .
+        '{"nome":"Norberto",        "j":27,"m":2053},' .
+        '{"nome":"Gustavo Henrique",   "j":26,"m":1987},' .
         '{"nome":"Wenderson",        "j":24,"m":1768},' .
         '{"nome":"Salazar",        "j":20,"m":1741}' .
         ']}'
@@ -62,14 +62,14 @@ $rankingMinutagem = json_decode(
 $rankingAmarelos = json_decode(
     '{"amarelo": ' .
         '[' .
-        '{"nome":"Marcos Ytalo",           "j":25,"a":10},' .
+        '{"nome":"Marcos Ytalo",           "j":26,"a":10},' .
         '{"nome":"Wenderson",       "j":24,"a":8},' .
-        '{"nome":"Alan",   "j":31,"a":8},' .
-        '{"nome":"Souza","j":34,"a":7},' .
+        '{"nome":"Alan",   "j":32,"a":8},' .
+        '{"nome":"Antônio Villa","j":22,"a":7},' .
+        '{"nome":"Souza","j":35,"a":7},' .
         '{"nome":"Rodriguinho",    "j":20,"a":6},' .
-        '{"nome":"Antônio Villa","j":21,"a":6},' .
-        '{"nome":"Rafael Jansen","j":23,"a":6},' .
-        '{"nome":"Gustavo Ramos","j":23,"a":5},' .
+        '{"nome":"Rafael Jansen","j":24,"a":6},' .
+        '{"nome":"Gustavo Ramos","j":24,"a":5},' .
         '{"nome":"Rafinha",   "j":20,"a":4},' .
         '{"nome":"Salazar","j":20,"a":4}' .
         ']}'
@@ -77,12 +77,12 @@ $rankingAmarelos = json_decode(
 $rankingVermelhos = json_decode(
     '{"vermelho": ' .
         '[' .
-        '{"nome":"Antônio Villa",            "j":21,"v":1},' .
-        '{"nome":"Rafael Jansen",            "j":23,"v":1},' .
+        '{"nome":"Antônio Villa",            "j":22,"v":1},' .
         '{"nome":"Wenderson",            "j":24,"v":1},' .
-        '{"nome":"Gustavo Henrique",            "j":25,"v":1},' .
-        '{"nome":"Alan",            "j":31,"v":1},' .
-        '{"nome":"Ferreira",       "j":33,"v":1}' .
+        '{"nome":"Rafael Jansen",            "j":24,"v":1},' .
+        '{"nome":"Gustavo Henrique",            "j":26,"v":1},' .
+        '{"nome":"Alan",            "j":32,"v":1},' .
+        '{"nome":"Ferreira",       "j":34,"v":1}' .
         ']}'
 );
 $jogos = $rankingJogos->jogos;

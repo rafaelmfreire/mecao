@@ -7,14 +7,14 @@
     <?php
     $classificacao = json_decode('{"times": ' .
         '[' .
-        '{"nome":"Treze",       "j":12, "v": 8, "e": 3, "d": 1, "gp": 25, "gc": 8},' .
-        '{"nome":"Iguatu",      "j":13, "v": 7, "e": 3, "d": 3, "gp": 13,  "gc": 8},' .
-        '{"nome":"América", "j":13, "v": 6, "e": 5, "d": 2, "gp": 16, "gc": 8},' .
-        '{"nome":"Sousa",  "j":12, "v": 5, "e": 2, "d": 5, "gp": 11, "gc": 12},' .
-        '{"nome":"Atlético-CE",     "j":13, "v": 5, "e": 2, "d": 6, "gp": 13, "gc": 15},' .
-        '{"nome":"Santa Cruz",       "j":13, "v": 5, "e": 1, "d": 7, "gp": 17,  "gc": 23},' .
-        '{"nome":"Maracanã-CE", "j":12, "v": 2, "e": 3, "d": 7, "gp": 10,  "gc": 19},' .
-        '{"nome":"Potiguar",    "j":12, "v": 1, "e": 3, "d": 8, "gp": 6,  "gc": 18}' .
+        '{"nome":"Treze",           "j":14, "v": 9, "e": 4, "d": 1, "gp": 28, "gc": 9},' .
+        '{"nome":"Iguatu",          "j":14, "v": 8, "e": 3, "d": 3, "gp": 14, "gc": 8},' .
+        '{"nome":"América",         "j":14, "v": 7, "e": 5, "d": 2, "gp": 18, "gc": 9},' .
+        '{"nome":"Atlético-CE",     "j":14, "v": 5, "e": 3, "d": 6, "gp": 14, "gc": 16},' .
+        '{"nome":"Sousa",           "j":14, "v": 5, "e": 3, "d": 6, "gp": 12, "gc": 14},' .
+        '{"nome":"Santa Cruz",      "j":14, "v": 5, "e": 1, "d": 8, "gp": 17, "gc": 25},' .
+        '{"nome":"Maracanã-CE",     "j":14, "v": 3, "e": 3, "d": 8, "gp": 13, "gc": 21},' .
+        '{"nome":"Potiguar",        "j":14, "v": 1, "e": 4, "d": 9, "gp": 7,  "gc": 21}' .
         ']}');
     ?>
     <div class="px-4 py-4 w-full">

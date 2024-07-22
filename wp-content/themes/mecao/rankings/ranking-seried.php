@@ -9,9 +9,9 @@ $rankingJogos = json_decode(
         '{"nome":"Wenderson",       "j":11},' .
         '{"nome":"Gustavo Henrique","j":11},' .
         '{"nome":"Henrique",        "j":11},' .
-        '{"nome":"Marcos Ytalo",    "j":10}' .
+        '{"nome":"Marcos Ytalo",    "j":10},' .
         '{"nome":"Marquinhos Pedroso","j":10},' .
-        '{"nome":"Gabriel Davis",   "j":10},' .
+        '{"nome":"Gabriel Davis",   "j":10}' .
         ']}'
 );
 $rankingGols = json_decode(
